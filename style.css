@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-background-black: rgba(0,0,0,0.87);
+    --color-text-white: #fff;
+}
+
+/* HEADER */
+.logo{
+    border-radius: 50%;
+    border-right: 4px solid white;
+    display: inline-block;
+    height: 50px;
+    margin-left: 50px;
+    width: 50px;
+}
+
+.logo:hover{
+    animation-name: rotateLogo;
+    animation-duration: 0.4s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+
+.logo span{
+    font-size: 1.6em;
+    font-family: 'Noto Serif', serif, sans-serif;
+    position: fixed;
+    top: 8px;
+    left: 63px;
+}
+
+.header{
+    align-items: center;
+    color: var(--color-text-white);
+    display: flex;
+    font-size: 1.3em;
+    font-weight: 600;
+    height: 62px;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.header li{
+    display: inline;
+    margin-left: 8px;
+    padding-bottom: 8px;
+    position: relative;
+}
+
+a::after{
+    background-color: #fff;
+    bottom: 0;
+    content: " ";
+    height: 3px;
+    left: 0;
+    position: absolute;
+    transition: 0.5s ease-in-out;
+    width: 0%;
+}
+
+.header a{
+    color: var(--color-text-white);
+    padding: 4px 8px;
+    text-decoration: none;
+}
+
+.header a:hover::after{
+    width: 100%;
+}
+
+.header li:last-child{
+    margin-right: 50px;
+}
+
+
+@keyframes rotateLogo{
+    0%{
+        border-right: 4px solid white;
+        border-bottom: 0px solid rgba(0, 0, 0, 0);
+        border-left: 0px solid rgba(0, 0, 0, 0);
+        border-top: 0px solid rgba(0, 0, 0, 0);
+    }
+    25%{
+        border-right: 0px solid rgba(0, 0, 0, 0);
+        border-bottom: 4px solid white;
+        border-left: 0px solid rgba(0, 0, 0, 0);
+        border-top: 0px solid rgba(0, 0, 0, 0);
+    }
+    50%{
+        border-right: 0px solid rgba(0, 0, 0, 0);
+        border-bottom: 0px solid rgba(0, 0, 0, 0);
+        border-left: 4px solid white;
+        border-top: 0px solid rgba(0, 0, 0, 0);
+    }
+    75%{
+        border-right: 0px solid rgba(0, 0, 0, 0);
+        border-bottom: 0px solid rgba(0, 0, 0, 0);
+        border-left: 0px solid rgba(0, 0, 0, 0);
+        border-top: 4px solid white;
+    }
+    100%{
+        border-right: 4px solid white;
+        border-bottom: 0px solid rgba(0, 0, 0, 0);
+        border-left: 0px solid rgba(0, 0, 0, 0);
+        border-top: 0px solid rgba(0, 0, 0, 0);
+    }
+}
+
+/* main */
+
+.apresentation{
+    align-items: center;
+    background-color: var(--color-background-black);
+    color: var(--color-text-white);
+    display: flex;
+    flex-direction: column;
+    height: 150vh;
+    justify-content: center;
+    text-align: center;
+}
+
+.apresentation h1{
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.apresentation h1 span{
+    font-family: 'Noto Serif', serif, sans-serif;
+    font-size: 1.8em;
+}
+
+h1 span::after{
+    bottom: 0;
+    background-color: #fff;
+    content: " ";
+    height: 3px;
+    left: 0;
+    position: absolute;
+    transition: 0.5s ease-in-out;
+    width: 0%;
+}
+
+h1 span:hover::after{
+    width: 100%;
+}
+
+.apresentation h2{
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.apresentation img{
+    border-radius: 50%;
+    height: 134px;
+    margin-bottom: 42px;
+    width: 130px;
+}
+
+
+.social{
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    display: flex;
+}
+
+.social div{
+    align-items: center;
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    position: relative;
+    width: 60px;
+}
+
+.social img{
+    height: 32px;
+    margin: 0;
+    width: 32px;
+}
+
+.social img:hover{
+    height: 40px;
+    transition: 0.2s all ease-in;
+    width: 40px;
+}
+
+.apresentation-text{ 
+    background-color: white;
+    width: 100%;
+    line-height: 34px;
+    align-items: center;
+    font-size: 1.5em;
+    display: flex;  
+    justify-content: center;
+    height: 25vh;
+    color: black;
+}
