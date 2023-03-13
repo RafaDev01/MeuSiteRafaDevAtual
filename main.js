@@ -21,7 +21,7 @@ function toggleMenu(event){
         event.currentTarget.setAttribute("aria-label", "Abrir menu")
         setTimeout(()=>{
             header.classList.remove("active")
-        },1000)
+        },800)
     }
 }
 
