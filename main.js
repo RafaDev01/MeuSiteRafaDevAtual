@@ -5,7 +5,6 @@ const btnMobile = document.querySelector(".btn-mobile")
 const nav = document.querySelector(".nav")
 const apresentationParagraph = document.querySelector(".apresentation-paragraph")
 let onSpan = false
-console.log(apresentation.getBoundingClientRect().bottom)
 
 function toggleMenu(event){
     if(event.type === "touchstart") event.preventDefault()
@@ -45,7 +44,6 @@ const scrollPage = () =>{
     if(window.pageYOffset < 80) header.classList.remove("wrap-header")
     if(!onSpan){
         if(window.pageYOffset > apresentation.getBoundingClientRect().bottom / 4){
-            console.log(apresentationParagraph.getBoundingClientRect())
             spanApresentation()  
             onSpan = true
         }

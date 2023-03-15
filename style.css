@@ -59,14 +59,14 @@
 .menu{
     display: flex;
     list-style: none;
-    gap: 8px;
+    gap: 20px;
     position: relative;
     margin-right: 50px;
 }
 
 .nav a{
     position: relative;
-    padding-bottom: 6px;
+    padding-bottom: 10px;
 }
 
 .nav a::after{
@@ -87,7 +87,7 @@
 
 .menu a{
     color: var(--color-text-white);
-    padding: 4px 8px;
+    padding: 10px 0;
     text-decoration: none;
 }
 
@@ -356,4 +356,31 @@ h1 span:hover::after{
     }
 }
 
-/*REVEAL SCROLL*/
+@media (max-width: 480px),(max-height: 650px){
+    .apresentation-text{
+        height: 100vh;
+    }
+}
+
+
+@media (max-width: 769px){
+    .apresentation-text{
+        height: 80vh;
+    }
+}
+
+@media (max-width: 1300px){
+    .apresentation-text{
+        height: 70vh;
+    }
+}
+
+@media (max-width: 450px){
+        .name-apresentation{
+            max-width: 264px;
+        }    
+
+    .apresentation-text{
+        height: 100vh;
+    }
+}
