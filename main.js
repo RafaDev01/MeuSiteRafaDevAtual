@@ -1,8 +1,11 @@
 const body = document.querySelector("body")
 const header = document.querySelector(".header")
-const apresentation = document.querySelector(".section")
+const apresentation = document.querySelector(".apresentation")
 const btnMobile = document.querySelector(".btn-mobile")
 const nav = document.querySelector(".nav")
+const apresentationParagraph = document.querySelector(".apresentation-paragraph")
+let onSpan = false
+console.log(apresentation.getBoundingClientRect().bottom)
 
 function toggleMenu(event){
     if(event.type === "touchstart") event.preventDefault()
@@ -28,11 +31,32 @@ function toggleMenu(event){
 btnMobile.addEventListener("click", toggleMenu)
 btnMobile.addEventListener("touchstart", toggleMenu);
 
-const headerAtivo = () =>{
+const spanApresentation = () =>{
+    let span = document.createElement("span")
+    span.classList.add("name-apresentation")
+    span.innerHTML = `Olá eu sou o Rafael =&#41;`
+    apresentationParagraph.insertAdjacentElement('afterbegin', span)
+
+    return true
+}
+
+const scrollPage = () =>{
     if(window.pageYOffset > 80) header.classList.add("wrap-header")
     if(window.pageYOffset < 80) header.classList.remove("wrap-header")
+    if(!onSpan){
+        if(window.pageYOffset > apresentation.getBoundingClientRect().bottom / 4){
+            console.log(apresentationParagraph.getBoundingClientRect())
+            spanApresentation()  
+            onSpan = true
+        }
+    }
 }
 
 window.addEventListener("scroll", e =>{
-     headerAtivo() 
+     scrollPage() 
 })
+
+//scroll reveal code
+// window.sr = ScrollReveal({ reset: true });
+
+// sr.reveal(".name-apresentation", {duration: 1000})

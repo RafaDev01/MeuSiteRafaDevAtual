@@ -57,6 +57,7 @@
 }
 
 .menu{
+    display: flex;
     list-style: none;
     gap: 8px;
     position: relative;
@@ -305,8 +306,13 @@ h1 span:hover::after{
     color: var(--color-background-black);
 }
 
-.apresentation-text p , span{
+.apresentation-text p {
     margin-bottom: 3vh;
+}
+
+.apresentation-paragraph{
+    display: block;
+    height: 40px;
 }
 
 .apresentation-text > div{
@@ -349,3 +355,5 @@ h1 span:hover::after{
         border-right: transparent;
     }
 }
+
+/*REVEAL SCROLL*/
