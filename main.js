@@ -5,8 +5,11 @@ const btnMobile = document.querySelector(".btn-mobile")
 const nav = document.querySelector(".nav")
 const apresentationParagraph = document.querySelector(".apresentation-paragraph")
 const discord = document.querySelector(".discord").parentElement
+const arrow = document.querySelector(".portfolio--works")
+const works = document.querySelectorAll(".work")
 
 let onSpan = false
+let onHover = false
 
 window.addEventListener("scroll", e =>{
     scrollPage() 
@@ -72,7 +75,19 @@ const scrollPage = () =>{
     }
 }
 
+const arrowShowMore = () => {
+    let arrow = document.createElement("span")
+}
 
+const creatHoverWork = () =>{
+    let hoverWorkDiv = document.createElement("div")
+    hoverWorkDiv.classList.add("hover-white")
+
+    let hoverWorkP = document.createElement("p")
+    hoverWorkP.innerHTML = `Conteúdo</br>não disponivel`
+    hoverWorkDiv.appendChild(hoverWorkP)
+    return hoverWorkDiv
+}
 
 //scroll reveal code
 // window.sr = ScrollReveal({ reset: true });

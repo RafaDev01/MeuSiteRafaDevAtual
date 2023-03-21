@@ -400,6 +400,7 @@ h1 span:hover::after{
 }
 
 .portfolio{
+    align-items: center;
     height: 100vh;
     overflow: hidden;
 }
@@ -435,17 +436,148 @@ h1 span:hover::after{
     display: flex;
     gap: 32px;
     justify-content: center;
-    margin-bottom: 100px;
 }
 
 .work{
-    background-color: red;
+    align-items: center;
+    align-items: center;
+    background-color: rgb(44, 44, 44);
+    border-radius: 0 28px;
+    display: flex;
+    justify-content: center;
     min-height: 350px;
     min-width: 350px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
     transition: 0.5s;
 }
 
-.work:hover{
+.work:hover.active{
+    border-radius: 4px;
     transition: 0.5s;
-    transform: scale(1.05);
+    transform: scale(1.02) translateY(-8px);
+}
+
+.portfolio--works{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.soon{
+    align-items: center;
+    background-color: #1f1f1f;
+    color: white;
+    display: flex;
+    font-weight: 700;
+    font-size: 22px;
+    height: 72px;
+    justify-content: center;
+    position: absolute;
+    transform: rotate(-45deg);
+    width: 150%;
+}
+
+.hover-white{
+    align-items: center;
+    color: white;
+    display: flex;
+    font-size: 1.5em;
+    font-weight: 700;
+    height: 100%;
+    justify-content: center;
+    opacity: 0;
+    position: absolute;
+    transition: 0.5s;
+    width: 100%;
+}
+
+.hover-white:hover{
+    background: rgba(109, 109, 109, 0.953);
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.arrow-animation{
+    animation: upArrow infinite 1.5s ease-in-out;
+    position: absolute;
+    left: -1px;
+    bottom: 26px;
+}
+
+.container-arrow{
+    background-color: rgb(44, 44, 44);
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 20px 0;
+    padding: 26px;
+    position: relative;
+}
+
+.arrow-show-more{
+    background-color: #fff;
+    border-radius: 4px;
+    height: 5px;
+    left: 8px;
+    position: absolute;
+    transform: rotate(45deg);
+    width: 23px;
+}
+
+.arrow-show-less{
+    background-color: #fff;
+    border-radius: 4px;
+    height: 5px;
+    left: 22px;
+    position: absolute;
+    transform: rotate(45deg);
+    width: 23px;
+}
+
+.arrow-show-more::before{
+    border-radius: 4px;
+    background-color: #fff;
+    bottom: 10px;
+    content: " ";
+    display: block;
+    height: 5px;
+    left: 10px;
+    position: absolute;
+    transform: rotate(-90deg);
+    width: 23px;
+}
+
+.arrow-show-less{
+    background-color: #fff;
+    border-radius: 4px;
+    height: 5px;
+    position: absolute;
+    transform: rotate(45deg);
+    width: 23px;
+}
+
+.arrow-show-less::before{
+    border-radius: 4px;
+    background-color: #fff;
+    bottom: -10px;
+    content: " ";
+    display: block;
+    height: 5px;
+    right: 10px;
+    position: absolute;
+    transform: rotate(-90deg);
+    width: 23px;
+}
+
+@keyframes upArrow{
+    0%{
+        bottom: 26px;
+    }
+    50%{
+        bottom: 30px;
+    }
+    100%{
+        bottom: 26px;
+    }
 }
