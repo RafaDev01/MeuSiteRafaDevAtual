@@ -48,6 +48,7 @@
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 1000;
 }
 
 .wrap-header{
@@ -383,4 +384,55 @@ h1 span:hover::after{
     .apresentation-text{
         height: 100vh;
     }
+}
+
+.portfolio{
+    height: 100vh;
+    overflow: hidden;
+}
+
+.portfolio--top{
+    align-items: center;
+    background-size: cover;
+    background-image: url("https://img.freepik.com/fotos-gratis/vista-do-navegador-de-codigo-html-do-site-impressa-em-papel-branco-vista-closeup_211682-164.jpg?w=1060&t=st=1679385147~exp=1679385747~hmac=1994b32b6f9f836323ad2051449dccf5e841f0b6fea3d438b8dac48aeeed4bb9");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: right;
+    display: flex;
+    height: 20vh;
+    justify-content: center;
+    margin-bottom: 64px;
+    position: relative;
+}
+
+.add--black {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.921);
+}
+
+.portfolio--top h2{
+    color: white;
+    position: absolute;
+}
+
+.portfolio--works{
+    align-items: center;
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.work{
+    background-color: red;
+    height: 350px;
+    width: 350px;
+    transition: 0.5s;
+}
+
+.work:hover{
+    transition: 0.5s;
+    transform: scale(1.05);
 }
