@@ -427,8 +427,8 @@ h1 span:hover::after{
 
 .work{
     background-color: red;
-    height: 350px;
-    width: 350px;
+    min-height: 350px;
+    min-width: 350px;
     transition: 0.5s;
 }
 
