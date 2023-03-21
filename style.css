@@ -283,6 +283,7 @@ h1 span:hover::after{
 }
 
 .social img{
+    cursor: pointer;
     height: 32px;
     margin: 0;
     width: 32px;
@@ -292,6 +293,22 @@ h1 span:hover::after{
     height: 40px;
     transition: 0.2s all ease-in;
     width: 40px;
+}
+
+.discord{
+    display: none;
+}
+
+.discord--text{
+    cursor: default;
+    opacity: 0;
+    transition: 2s;
+}
+
+.discord--text.active{
+    cursor: text;
+    opacity: 1;
+    transition: 2s;
 }
 
 .apresentation-text{ 
@@ -377,10 +394,6 @@ h1 span:hover::after{
 }
 
 @media (max-width: 450px){
-        .name-apresentation{
-            max-width: 264px;
-        }    
-
     .apresentation-text{
         height: 100vh;
     }
