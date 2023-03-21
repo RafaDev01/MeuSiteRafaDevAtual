@@ -4,7 +4,13 @@ const apresentation = document.querySelector(".apresentation")
 const btnMobile = document.querySelector(".btn-mobile")
 const nav = document.querySelector(".nav")
 const apresentationParagraph = document.querySelector(".apresentation-paragraph")
+const discord = document.querySelector(".discord").parentElement
+
 let onSpan = false
+
+window.addEventListener("scroll", e =>{
+    scrollPage() 
+})
 
 function toggleMenu(event){
     if(event.type === "touchstart") event.preventDefault()
@@ -30,13 +36,29 @@ function toggleMenu(event){
 btnMobile.addEventListener("click", toggleMenu)
 btnMobile.addEventListener("touchstart", toggleMenu);
 
+async function copiarTexto() {
+    try { await navigator.clipboard.writeText(discord.lastChild.textContent);
+    } catch (error) {"erro"}
+  }
+
+discord.addEventListener("click",()=>{
+    copiarTexto()
+    showDiscordText()
+})
+
+showDiscordText = () =>{ 
+    let discordText = document.querySelector(".discord--text")
+    discordText.classList.add("active")
+    setTimeout(()=>{
+        discordText.classList.remove("active")
+    },8000)
+}
+
 const spanApresentation = () =>{
     let span = document.createElement("span")
     span.classList.add("name-apresentation")
     span.innerHTML = `Olá eu sou o Rafael =&#41;`
     apresentationParagraph.insertAdjacentElement('afterbegin', span)
-
-    return true
 }
 
 const scrollPage = () =>{
@@ -50,9 +72,7 @@ const scrollPage = () =>{
     }
 }
 
-window.addEventListener("scroll", e =>{
-     scrollPage() 
-})
+
 
 //scroll reveal code
 // window.sr = ScrollReveal({ reset: true });
