@@ -319,7 +319,7 @@ h1 span:hover::after{
     display: flex;  
     flex-direction: column;
     font-size: 1.3em;
-    height: 40vh;
+    height: 300px;
     justify-content: center;
     line-height: 34px;
     width: 100%;
@@ -374,27 +374,21 @@ h1 span:hover::after{
     }
 }
 
-@media (max-width: 480px),(max-height: 650px){
-    .apresentation-text{
-        height: 100vh;
-    }
-}
-
-@media (max-width: 769px){
-    .apresentation-text{
-        height: 80vh;
-    }
-}
-
 @media (max-width: 1300px){
     .apresentation-text{
-        height: 70vh;
+        height: 400px;
     }
 }
 
-@media (max-width: 450px){
+@media (max-width: 700px){
     .apresentation-text{
-        height: 100vh;
+        height: 600px;
+    }
+}
+
+@media (max-width: 480px){
+    .apresentation-text{
+        height: 700px;
     }
 }
 
