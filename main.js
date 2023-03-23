@@ -5,11 +5,13 @@ const btnMobile = document.querySelector(".btn-mobile")
 const nav = document.querySelector(".nav")
 const apresentationParagraph = document.querySelector(".apresentation-paragraph")
 const discord = document.querySelector(".discord").parentElement
-const arrow = document.querySelector(".portfolio--works")
+const portfolioWorks = [...document.querySelectorAll(".portfolio--works")]
+const portfolio = document.querySelector(".portfolio")
+const btnShowMore = document.querySelector(".btn-show-more")
+const btnShowLess = document.querySelector(".btn-show-less")
 const works = document.querySelectorAll(".work")
 
 let onSpan = false
-let onHover = false
 
 window.addEventListener("scroll", e =>{
     scrollPage() 
@@ -42,7 +44,7 @@ btnMobile.addEventListener("touchstart", toggleMenu);
 async function copiarTexto() {
     try { await navigator.clipboard.writeText(discord.lastChild.textContent);
     } catch (error) {"erro"}
-  }
+}
 
 discord.addEventListener("click",()=>{
     copiarTexto()
@@ -75,19 +77,69 @@ const scrollPage = () =>{
     }
 }
 
-const arrowShowMore = () => {
-    let arrow = document.createElement("span")
-}
-
 const creatHoverWork = () =>{
     let hoverWorkDiv = document.createElement("div")
-    hoverWorkDiv.classList.add("hover-white")
 
     let hoverWorkP = document.createElement("p")
-    hoverWorkP.innerHTML = `Conteúdo</br>não disponivel`
+    hoverWorkP.innerHTML = `Conteúdo</br>indisponível`
     hoverWorkDiv.appendChild(hoverWorkP)
     return hoverWorkDiv
 }
+
+function mouseHoverWork(elemento){
+    const eventAdd = () => {
+        if(elemento.classList.contains("active")){
+            let newElement = elemento.appendChild(creatHoverWork())
+            newElement.classList.add("hover-white")
+            elemento.addEventListener("mouseleave", ()=>{
+            setInterval(()=>{
+                newElement.remove()
+            },500)
+        });
+        }
+    };
+    elemento.addEventListener("mouseenter", eventAdd);
+}
+
+btnShowMore.addEventListener("click", ()=>{
+    btnShowMore.classList.add("btn-down")
+    setTimeout(()=>{
+        portfolio.classList.toggle("active")
+        works.forEach((elemento, index) =>{
+        elemento.classList.add("active")
+        if(index > 2){
+            elemento.classList.toggle("off")
+        }
+        btnShowMore.classList.remove("btn-down")
+    })
+    },500)
+})
+
+btnShowLess.addEventListener("click", ()=>{
+    btnShowLess.classList.add("btn-up")
+    setTimeout(()=>{
+            portfolio.classList.toggle("active")
+            works.forEach((elemento,index)=>{
+            if(index > 2){
+                elemento.classList.remove("active")
+                if(index > 2){
+                    elemento.classList.toggle("off")
+                }
+            }
+            btnShowLess.classList.remove("btn-up")
+        })
+    },500)
+})
+
+const addHoverWork = () =>{
+    works.forEach(elemento =>{
+        mouseHoverWork(elemento)
+    })
+}
+
+addHoverWork()
+
+console.log(works)
 
 //scroll reveal code
 // window.sr = ScrollReveal({ reset: true });
