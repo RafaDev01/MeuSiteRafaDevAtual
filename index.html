@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/scrollreveal"></script>
+    <meta name="author" content="Rafael do Nascimento">
+    <meta name="description" content="Desenvolvedor em busca de estágio não remunerado para aprender e aplicar minhas habilidades em projetos reais. Possuo conhecimentos em HTML, CSS e JavaScript, e estou sempre em busca de novos desafios e oportunidades de crescimento. Confira meu currículo e entre em contato comigo para saber mais.">
+    <meta name="googlebot" content="index, follow">
+    <meta name="keywords" content="desenvolvedor, estágio, não remunerado, HTML, CSS, JavaScript,currículo, Contato">
+    <meta name="robots" content="index, follow">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="assets/img/fivicon.png">
-    <title>Rafa Dev</title>
+    <title>Desenvolvedor em busca de estágio não remunerado | Rafael do Nascimento</title>
 </head>
 <body>
     <header class="header">
@@ -16,9 +20,9 @@
             </div>
             <nav class="nav">
                 <ul class="menu" role="menu">
-                    <li><a class="botton-effect" href="">SOBRE</a></li>
-                    <li><a class="botton-effect" href="">PORTFOLIO</a></li>
-                    <li><a class="botton-effect" href="">CONTATO</a></li>
+                    <li><a href="#apresentation" class="botton-effect btn-link">SOBRE</a></li>
+                    <li><a href="#portfolio" class="botton-effect btn-link">PORTFOLIO</a></li>
+                    <li><a href="#contato" class="botton-effect btn-link">CONTATO</a></li>
                 </ul>
                 <button class="btn-mobile" aria-label="Abrir menu" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
                     <span class="hamburguer"></span>
@@ -26,7 +30,7 @@
             </nav> 
     </header>
         <main class="main">
-                <section>
+                <section id="apresentation">
                     <div class="apresentation">
                         <img class="foto" src="assets/img/profile.png" alt="">
                         <h1 class="botton-effect"><span>Rafael Nascimento</span></h1>
@@ -53,10 +57,9 @@
                     </div>
                 </section>
 
-                <section class="portfolio">
+                <section id="portfolio" class="portfolio">
                     <div class="portfolio--top">
-                    <div class="add--black">
-                    </div>
+                    <div class="add--black"></div>
                         <h2>PORTFOLIO</h2>
                     </div>
                     <div class="portfolio--works">
@@ -94,8 +97,23 @@
                             <button class="btn-mostrar-mais btn-show-less">Mostrar menos</button>
                         </div>
                     </div>
-
                 </section>
+
+                <footer id="contato" class="footer">
+                    <div class="contact">
+                        <h3>Contato</h3>
+                        <div>
+                            <span>Discord: Rafael#5166</span>
+                        </div>
+                        <div>
+                            <span>Email:</span>
+                            <a class="email-txt" href="mailto:rflwwe123@hotmail.com" target="_blank">rflwwe123@hotmail.com</a>
+                        </div>
+                    </div>
+                    <div class="copy">
+                        <p>© 2023 Rafael do Nascimento</p>
+                    </div>
+                </footer>
         </main>
     <script src="main.js"></script>
 </body>

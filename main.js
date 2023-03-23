@@ -1,5 +1,6 @@
 const body = document.querySelector("body")
 const header = document.querySelector(".header")
+const menuLink = [...document.querySelectorAll('.btn-link[href^="#"]')]
 const apresentation = document.querySelector(".apresentation")
 const btnMobile = document.querySelector(".btn-mobile")
 const nav = document.querySelector(".nav")
@@ -40,6 +41,13 @@ function toggleMenu(event){
 
 btnMobile.addEventListener("click", toggleMenu)
 btnMobile.addEventListener("touchstart", toggleMenu);
+
+menuLink.forEach( elemento =>{
+    elemento.addEventListener("click", ()=>{
+        nav.classList.toggle("active")
+        body.classList.toggle("active")
+    })
+})
 
 async function copiarTexto() {
     try { await navigator.clipboard.writeText(discord.lastChild.textContent);
@@ -138,10 +146,3 @@ const addHoverWork = () =>{
 }
 
 addHoverWork()
-
-console.log(works)
-
-//scroll reveal code
-// window.sr = ScrollReveal({ reset: true });
-
-// sr.reveal(".name-apresentation", {duration: 1000})
