@@ -262,9 +262,9 @@ h1 span:hover::after{
 
 .apresentation img{
     border-radius: 50%;
-    height: 134px;
+    height: 200x;
     margin-bottom: 42px;
-    width: 130px;
+    width: 200px;
 }
 
 
@@ -361,7 +361,7 @@ h1 span:hover::after{
         width: 0;
     }
     to{
-        width: 10.5em;
+        width: 11em;
     }
 }
 
