@@ -1,23 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-*{
+* {
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: Arial, sans-serif;
+    ;
     margin: 0;
     padding: 0;
 }
 
 :root {
-    --color-background-black: rgba(0,0,0,0.87);
+    --color-background-black: rgba(0, 0, 0, 0.87);
     --color-text-white: #fff;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
 /* HEADER */
-.logo{
+.logo {
     border-radius: 50%;
     border-right: 4px solid white;
     display: inline-block;
@@ -26,14 +27,14 @@ html{
     width: 50px;
 }
 
-.logo:hover{
+.logo:hover {
     animation-name: rotateLogo;
     animation-duration: 0.4s;
     animation-timing-function: ease;
     animation-iteration-count: infinite;
 }
 
-.logo span{
+.logo span {
     font-size: 1.6em;
     font-family: 'Noto Serif', serif, sans-serif;
     position: fixed;
@@ -41,7 +42,7 @@ html{
     top: 8px;
 }
 
-.header{
+.header {
     align-items: center;
     color: var(--color-text-white);
     display: flex;
@@ -55,13 +56,13 @@ html{
     z-index: 1000;
 }
 
-.wrap-header{
+.wrap-header {
     background-color: #1f1f1f;
     box-shadow: 0px 2px 10px #161616d2;
     transition: 0.3s ease-in;
 }
 
-.menu{
+.menu {
     display: flex;
     gap: 20px;
     list-style: none;
@@ -69,12 +70,12 @@ html{
     position: relative;
 }
 
-.nav a{
+.nav a {
     position: relative;
     padding-bottom: 10px;
 }
 
-.nav a::after{
+.nav a::after {
     background-color: #fff;
     bottom: 0;
     content: " ";
@@ -85,42 +86,46 @@ html{
     width: 0%;
 }
 
-.botton-effect:hover::after{
+.botton-effect:hover::after {
     width: 100%;
 }
 
-.menu a{
+.menu a {
     color: var(--color-text-white);
     padding: 10px 0;
     text-decoration: none;
 }
 
-@keyframes rotateLogo{
-    0%{
+@keyframes rotateLogo {
+    0% {
         border-right: 4px solid white;
         border-bottom: 0px solid rgba(0, 0, 0, 0);
         border-left: 0px solid rgba(0, 0, 0, 0);
         border-top: 0px solid rgba(0, 0, 0, 0);
     }
-    25%{
+
+    25% {
         border-right: 0px solid rgba(0, 0, 0, 0);
         border-bottom: 4px solid white;
         border-left: 0px solid rgba(0, 0, 0, 0);
         border-top: 0px solid rgba(0, 0, 0, 0);
     }
-    50%{
+
+    50% {
         border-right: 0px solid rgba(0, 0, 0, 0);
         border-bottom: 0px solid rgba(0, 0, 0, 0);
         border-left: 4px solid white;
         border-top: 0px solid rgba(0, 0, 0, 0);
     }
-    75%{
+
+    75% {
         border-right: 0px solid rgba(0, 0, 0, 0);
         border-bottom: 0px solid rgba(0, 0, 0, 0);
         border-left: 0px solid rgba(0, 0, 0, 0);
         border-top: 4px solid white;
     }
-    100%{
+
+    100% {
         border-right: 4px solid white;
         border-bottom: 0px solid rgba(0, 0, 0, 0);
         border-left: 0px solid rgba(0, 0, 0, 0);
@@ -128,13 +133,13 @@ html{
     }
 }
 
-.btn-mobile{
+.btn-mobile {
     display: none;
     margin-right: 50px;
 }
 
-@media (max-width: 600px){
-    .menu{
+@media (max-width: 600px) {
+    .menu {
         margin-right: 0;
         font-size: 2rem;
         text-align: center;
@@ -153,28 +158,28 @@ html{
         z-index: 1000;
     }
 
-    .menu li{
+    .menu li {
         padding: 26px;
     }
 
-    .nav.active .menu{
+    .nav.active .menu {
         visibility: visible;
         height: calc(100vh - 59px);
     }
 
-    .header.active{
+    .header.active {
         background-color: #1f1f1f;
     }
 
-    body.active{
+    body.active {
         overflow: hidden;
     }
 
-    .menu a{
+    .menu a {
         padding: 1rem 0;
     }
 
-    .btn-mobile{
+    .btn-mobile {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
@@ -188,13 +193,14 @@ html{
         gap: 0.5rem;
     }
 
-    .hamburguer{
+    .hamburguer {
         color: var(--color-text-white);
         border-top: 3px solid;
         width: 24px;
     }
 
-    .hamburguer::before, .hamburguer::after{
+    .hamburguer::before,
+    .hamburguer::after {
         width: 24px;
         height: 3px;
         background: currentColor;
@@ -205,22 +211,22 @@ html{
         position: relative;
     }
 
-    .nav.active .hamburguer{
+    .nav.active .hamburguer {
         border-top-color: transparent;
     }
 
-    .nav.active .hamburguer::before{
+    .nav.active .hamburguer::before {
         transform: rotate(135deg);
     }
 
-    .nav.active .hamburguer::after{
+    .nav.active .hamburguer::after {
         transform: rotate(-135deg);
         top: -8px;
     }
 }
 
 /* main */
-.apresentation{
+.apresentation {
     align-items: center;
     background-color: var(--color-background-black);
     color: var(--color-text-white);
@@ -231,16 +237,16 @@ html{
     text-align: center;
 }
 
-.apresentation h1{
+.apresentation h1 {
     margin-bottom: 20px;
 }
 
-.apresentation h1 span{
+.apresentation h1 span {
     font-family: 'Noto Serif', serif, sans-serif;
     font-size: 1.8em;
 }
 
-h1 span::after{
+h1 span::after {
     background-color: #fff;
     bottom: 0;
     content: " ";
@@ -251,31 +257,35 @@ h1 span::after{
     z-index: 1;
 }
 
-h1 span:hover::after{
+h1 span:hover::after {
     width: 100%;
 }
 
-.apresentation h2{
+.apresentation h2 {
     font-size: 2em;
     margin-bottom: 20px;
 }
 
-.apresentation img{
+.apresentation img {
     border-radius: 50%;
     height: 200x;
     margin-bottom: 42px;
     width: 200px;
 }
 
+.apresentation-content {
+    height: 100%;
+}
 
-.social{
+
+.social {
     align-content: center;
     align-items: center;
     align-self: center;
     display: flex;
 }
 
-.social div{
+.social div {
     align-items: center;
     display: flex;
     height: 60px;
@@ -283,72 +293,75 @@ h1 span:hover::after{
     width: 60px;
 }
 
-.social img{
+.social img {
     cursor: pointer;
     height: 32px;
     margin: 0;
     width: 32px;
 }
 
-.social img:hover{
+.social img:hover {
     height: 40px;
     transition: 0.2s all ease-in;
     width: 40px;
 }
 
-.discord{
+.discord {
     display: none;
 }
 
-.discord--text{
+.discord--text {
     cursor: default;
     opacity: 0;
     transition: 2s;
 }
 
-.discord--text.active{
+.discord--text.active {
     cursor: text;
     opacity: 1;
     transition: 2s;
 }
 
-.apresentation-text{ 
+.apresentation-text {
     align-items: center;
     background-color: white;
     color: var(--color-background-black);
-    display: flex;  
+    display: flex;
     flex-direction: column;
-    font-size: 1.3em;
-    height: 300px;
+    font-size: 18px;
     justify-content: center;
-    line-height: 34px;
+    line-height: 1.5;
+    margin: 0 auto;
+    max-width: 120ch;
     width: 100%;
+    padding: 24px 0;
+    text-align: justify;
 }
 
 .apresentation-text p {
-    margin-bottom: 3vh;
+    margin-bottom: 10px;
 }
 
-.apresentation-paragraph{
+.apresentation-paragraph {
     display: block;
     height: 40px;
 }
 
-.apresentation-text > div{
+.apresentation-text>div {
     width: 90%;
 }
 
-.apresentation-text a{
+.apresentation-text a {
     color: var(--color-background-black);
 }
 
-.apresentation-text a:hover{
+.apresentation-text a:hover {
     color: rgba(0, 0, 0, 0.673);
 }
 
-.name-apresentation{
+.name-apresentation {
     animation: blinkCursor 500ms steps(20) infinite normal,
-    typing 2s steps(250) 1s normal both;
+        typing 2s steps(250) 1s normal both;
     display: inline-block;
     font-weight: bolder;
     font-size: 1.5em;
@@ -356,74 +369,64 @@ h1 span:hover::after{
     white-space: nowrap;
 }
 
-@keyframes typing{
-    from{
+@keyframes typing {
+    from {
         width: 0;
     }
-    to{
+
+    to {
         width: 11em;
     }
 }
 
-@keyframes blinkCursor{
-    from{
+@keyframes blinkCursor {
+    from {
         border-right: 2px solid rgba(0, 0, 0, 0.673);
     }
-    to{
+
+    to {
         border-right: transparent;
     }
 }
 
-@media (max-width: 1300px){
-    .apresentation-text{
-        height: 400px;
+@media (max-width: 700px) {
+    .experience-paragraph {
+        display: none;
     }
 }
 
-@media (max-width: 700px){
-    .apresentation-text{
-        height: 600px;
-    }
-}
-
-@media (max-width: 480px){
-    .apresentation-text{
-        height: 700px;
-    }
-}
-
-.portfolio{
+.portfolio {
     align-items: center;
     height: 700px;
     overflow: hidden;
 }
 
-.portfolio.active{
+.portfolio.active {
     align-items: center;
     height: 1020px;
 }
 
-@media (max-width: 1171px){
-    .portfolio{
+@media (max-width: 1171px) {
+    .portfolio {
         height: 1100px;
     }
-    
-    .portfolio.active{
+
+    .portfolio.active {
         height: 1780px;
     }
 }
 
-@media (max-width: 788px){
-    .portfolio{
+@media (max-width: 788px) {
+    .portfolio {
         height: 1500px;
     }
 
-    .portfolio.active{
+    .portfolio.active {
         height: 2560px;
     }
 }
 
-.portfolio--top{
+.portfolio--top {
     align-items: center;
     background-size: cover;
     background-image: url("https://img.freepik.com/fotos-gratis/vista-do-navegador-de-codigo-html-do-site-impressa-em-papel-branco-vista-closeup_211682-164.jpg?w=1060&t=st=1679385147~exp=1679385747~hmac=1994b32b6f9f836323ad2051449dccf5e841f0b6fea3d438b8dac48aeeed4bb9");
@@ -444,12 +447,12 @@ h1 span:hover::after{
     width: 100%;
 }
 
-.portfolio--top h2{
+.portfolio--top h2 {
     color: white;
     position: absolute;
 }
 
-.portfolio--works{
+.portfolio--works {
     align-items: center;
     display: flex;
     flex-wrap: wrap;
@@ -458,7 +461,7 @@ h1 span:hover::after{
     margin: 20px;
 }
 
-.work{
+.work {
     align-items: center;
     align-items: center;
     background-color: rgb(44, 44, 44);
@@ -473,13 +476,13 @@ h1 span:hover::after{
     transition: 1s;
 }
 
-.work:hover.active{
+.work:hover.active {
     border-radius: 4px;
     transition: 0.5s;
     transform: scale(1.02) translateY(-8px);
 }
 
-.soon{
+.soon {
     align-items: center;
     background-color: #1f1f1f;
     color: white;
@@ -493,7 +496,7 @@ h1 span:hover::after{
     width: 150%;
 }
 
-.hover-white{
+.hover-white {
     align-items: center;
     color: white;
     display: flex;
@@ -507,59 +510,63 @@ h1 span:hover::after{
     width: 100%;
 }
 
-.hover-white:hover{
+.hover-white:hover {
     background: rgba(109, 109, 109, 0.953);
     opacity: 1;
     transition: 0.5s;
 }
 
-.btn-show{
+.btn-show {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     width: 100%;
 }
 
-.btn-down{
+.btn-down {
     animation: btnDown 0.6s ease-in-out;
     position: absolute;
 }
 
-.btn-up{
+.btn-up {
     animation: btnUp 0.6s ease-in-out;
     position: absolute;
 }
 
-@keyframes btnDown{
-    0%{
+@keyframes btnDown {
+    0% {
         top: 0px;
     }
-    25%{
+
+    25% {
         top: -10px;
     }
-    100%{
+
+    100% {
         top: 32px;
     }
 }
 
-@keyframes btnUp{
-    0%{
+@keyframes btnUp {
+    0% {
         top: 0px;
     }
-    25%{
+
+    25% {
         top: 10px;
     }
-    100%{
+
+    100% {
         top: -32px;
     }
 }
 
-.portfolio.active .btn-show-1{
+.portfolio.active .btn-show-1 {
     display: none;
 }
 
-.btn-mostrar-mais{
+.btn-mostrar-mais {
     background-color: #1f1f1fe1;
-    border:  none;
+    border: none;
     border-radius: 5px;
     color: white;
     font-weight: 600;
@@ -568,7 +575,7 @@ h1 span:hover::after{
     transition: .3s all ease-in-out;
 }
 
-.container-btn{
+.container-btn {
     align-items: flex-end;
     display: flex;
     height: 46px;
@@ -577,19 +584,19 @@ h1 span:hover::after{
     width: 125px;
 }
 
-.container-btn:hover .btn-mostrar-mais{
+.container-btn:hover .btn-mostrar-mais {
     background-color: var(--color-background-black);
     cursor: pointer;
     margin-bottom: 6px;
     transition: .3s all ease-in-out;
 }
 
-.work.off{
-    background: linear-gradient(var(--color-background-black),rgba(0, 0, 0, 0.571) ,rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+.work.off {
+    background: linear-gradient(var(--color-background-black), rgba(0, 0, 0, 0.571), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
     transition: 2s;
 }
 
-.footer{
+.footer {
     align-items: center;
     background-color: var(--color-background-black);
     display: flex;
@@ -598,7 +605,7 @@ h1 span:hover::after{
     justify-content: center;
 }
 
-.contact{
+.contact {
     color: white;
     display: flex;
     flex-direction: column;
@@ -608,21 +615,21 @@ h1 span:hover::after{
     padding: 15px;
 }
 
-.contact h3{
+.contact h3 {
     font-size: 26px;
     margin-bottom: 8px;
 }
 
-.email-txt{
+.email-txt {
     color: rgba(22, 136, 218, 0.927);
     text-decoration: none;
 }
 
-.email-txt:hover{
+.email-txt:hover {
     color: rgb(22, 136, 218);
 }
 
-.copy{
+.copy {
     align-items: center;
     background-color: #0000003a;
     color: rgba(255, 255, 255, 0.64);
