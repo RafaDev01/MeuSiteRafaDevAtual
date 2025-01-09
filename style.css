@@ -306,6 +306,34 @@ h1 span:hover::after {
     width: 40px;
 }
 
+.languages-icons div {
+    align-items: center;
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    width: 60px;
+}
+
+.languages-icons {
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    display: flex;
+}
+
+.languages-icons img {
+    cursor: pointer;
+    height: 32px;
+    margin: 0;
+    width: 32px;
+}
+
+.languages-icons img:hover {
+    height: 40px;
+    transition: 0.2s all ease-in;
+    width: 40px;
+}
+
 .discord {
     display: none;
 }
