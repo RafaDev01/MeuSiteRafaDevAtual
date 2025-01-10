@@ -334,6 +334,41 @@ h1 span:hover::after {
     width: 40px;
 }
 
+.language-container {
+    background-color: var(--color-text-white);
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    text-align: center;
+}
+
+.language-container h2 {
+    color: rgb(255, 255, 255);
+    position: absolute;
+}
+
+.block {
+    background-color: rgba(0, 0, 0, 0.800);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+.language--top {
+    align-items: center;
+    background-size: cover;
+    background-image: url("https://img.freepik.com/fotos-gratis/codificacao-de-programa-de-computador-na-tela_53876-138060.jpg?t=st=1736473984~exp=1736477584~hmac=a17c7f76342fb7d138a3780c7e8aaf723734347c8bab6ae6813003d73988cfb1&w=1060");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: right;
+    display: flex;
+    height: 142px;
+    justify-content: center;
+    margin-bottom: 64px;
+    position: relative;
+}
+
 .discord {
     display: none;
 }
