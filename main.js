@@ -14,78 +14,84 @@ const works = document.querySelectorAll(".work")
 
 let onSpan = false
 
-window.addEventListener("scroll", e =>{
-    scrollPage() 
+window.addEventListener("scroll", e => {
+    scrollPage()
 })
 
-function toggleMenu(event){
-    if(event.type === "touchstart") event.preventDefault()
-    
+function toggleMenu(event) {
+    if (event.type === "touchstart") event.preventDefault()
+
     nav.classList.toggle("active")
     body.classList.toggle("active")
     let active = nav.classList.contains("active")
 
-    if(active){
+    if (active) {
         header.classList.add("active")
         event.currentTarget.setAttribute("aria-expended", "true")
         event.currentTarget.setAttribute("aria-label", "Fechar menu")
-    } 
-    if(!active){
+    }
+    if (!active) {
         event.currentTarget.setAttribute("aria-expended", "false")
         event.currentTarget.setAttribute("aria-label", "Abrir menu")
-        setTimeout(()=>{
+        setTimeout(() => {
             header.classList.remove("active")
-        },800)
+        }, 800)
     }
 }
+
+function toggleFlip(card) {
+    card.classList.toggle("flipped");
+}
+
 
 btnMobile.addEventListener("click", toggleMenu)
 btnMobile.addEventListener("touchstart", toggleMenu);
 
-menuLink.forEach( elemento =>{
-    elemento.addEventListener("click", ()=>{
+menuLink.forEach(elemento => {
+    elemento.addEventListener("click", () => {
         nav.classList.toggle("active")
         body.classList.toggle("active")
     })
 })
 
 async function copiarTexto() {
-    try { await navigator.clipboard.writeText(discord.lastChild.textContent);
-    } catch (error) {"erro"}
+    try {
+        await navigator.clipboard.writeText(discord.lastChild.textContent);
+    } catch (error) { "erro" }
 }
 
-discord.addEventListener("click",()=>{
+discord.addEventListener("click", () => {
     copiarTexto()
     showDiscordText()
 })
 
-showDiscordText = () =>{ 
+showDiscordText = () => {
     let discordText = document.querySelector(".discord--text")
     discordText.classList.add("active")
-    setTimeout(()=>{
+    setTimeout(() => {
         discordText.classList.remove("active")
-    },8000)
+    }, 8000)
 }
 
-const spanApresentation = () =>{
+const spanApresentation = () => {
     let span = document.createElement("span")
     span.classList.add("name-apresentation")
     span.innerHTML = `Olá eu sou o Rafael =&#41;`
     apresentationParagraph.insertAdjacentElement('afterbegin', span)
 }
 
-const scrollPage = () =>{
-    if(window.pageYOffset > 80) header.classList.add("wrap-header")
-    if(window.pageYOffset < 80) header.classList.remove("wrap-header")
-    if(!onSpan){
-        if(window.pageYOffset > apresentation.getBoundingClientRect().bottom / 4){
-            spanApresentation()  
+const scrollPage = () => {
+    if (window.pageYOffset > 80) header.classList.add("wrap-header")
+    if (window.pageYOffset < 80) header.classList.remove("wrap-header")
+    if (!onSpan) {
+        if (window.pageYOffset > apresentation.getBoundingClientRect().bottom / 4) {
+            spanApresentation()
             onSpan = true
         }
     }
 }
 
-const creatHoverWork = () =>{
+const creatHoverWork = () => {
     let hoverWorkDiv = document.createElement("div")
 
     let hoverWorkP = document.createElement("p")
@@ -94,53 +100,53 @@ const creatHoverWork = () =>{
     return hoverWorkDiv
 }
 
-function mouseHoverWork(elemento){
+function mouseHoverWork(elemento) {
     const eventAdd = () => {
-        if(elemento.classList.contains("active")){
+        if (elemento.classList.contains("active")) {
             let newElement = elemento.appendChild(creatHoverWork())
             newElement.classList.add("hover-white")
-            elemento.addEventListener("mouseleave", ()=>{
-            setInterval(()=>{
-                newElement.remove()
-            },500)
-        });
+            elemento.addEventListener("mouseleave", () => {
+                setInterval(() => {
+                    newElement.remove()
+                }, 500)
+            });
         }
     };
     elemento.addEventListener("mouseenter", eventAdd);
 }
 
-btnShowMore.addEventListener("click", ()=>{
+btnShowMore.addEventListener("click", () => {
     btnShowMore.classList.add("btn-down")
-    setTimeout(()=>{
+    setTimeout(() => {
         portfolio.classList.toggle("active")
-        works.forEach((elemento, index) =>{
-        elemento.classList.add("active")
-        if(index > 2){
-            elemento.classList.toggle("off")
-        }
-        btnShowMore.classList.remove("btn-down")
-    })
-    },500)
+        works.forEach((elemento, index) => {
+            elemento.classList.add("active")
+            if (index > 2) {
+                elemento.classList.toggle("off")
+            }
+            btnShowMore.classList.remove("btn-down")
+        })
+    }, 500)
 })
 
-btnShowLess.addEventListener("click", ()=>{
+btnShowLess.addEventListener("click", () => {
     btnShowLess.classList.add("btn-up")
-    setTimeout(()=>{
-            portfolio.classList.toggle("active")
-            works.forEach((elemento,index)=>{
-            if(index > 2){
+    setTimeout(() => {
+        portfolio.classList.toggle("active")
+        works.forEach((elemento, index) => {
+            if (index > 2) {
                 elemento.classList.remove("active")
-                if(index > 2){
+                if (index > 2) {
                     elemento.classList.toggle("off")
                 }
             }
             btnShowLess.classList.remove("btn-up")
         })
-    },500)
+    }, 500)
 })
 
-const addHoverWork = () =>{
-    works.forEach(elemento =>{
+const addHoverWork = () => {
+    works.forEach(elemento => {
         mouseHoverWork(elemento)
     })
 }

@@ -294,6 +294,7 @@ h1 span:hover::after {
 }
 
 .social img {
+    transition: 0.2s all ease-in;
     cursor: pointer;
     height: 32px;
     margin: 0;
@@ -309,29 +310,22 @@ h1 span:hover::after {
 .languages-icons div {
     align-items: center;
     display: flex;
-    height: 60px;
+    height: 180px;
     justify-content: center;
-    width: 60px;
-}
-
-.languages-icons {
-    align-content: center;
-    align-items: center;
-    align-self: center;
-    display: flex;
+    width: 180px;
 }
 
 .languages-icons img {
+    transition: 0.2s all ease-in;
     cursor: pointer;
-    height: 32px;
-    margin: 0;
-    width: 32px;
+    height: 140px;
+    width: 140px;
 }
 
 .languages-icons img:hover {
-    height: 40px;
+    height: 160px;
     transition: 0.2s all ease-in;
-    width: 40px;
+    width: 160px;
 }
 
 .language-container {
@@ -367,6 +361,81 @@ h1 span:hover::after {
     justify-content: center;
     margin-bottom: 64px;
     position: relative;
+}
+
+/* Estilização geral */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-language {
+    width: 150px;
+    height: 200px;
+    margin: 8px;
+    perspective: 1000px;
+    /* Necessário para criar o efeito 3D */
+    cursor: pointer;
+    position: relative;
+}
+
+.card-language div {
+    width: 100%;
+    height: 100%;
+    border-radius: 24px;
+    position: absolute;
+    backface-visibility: hidden;
+    /* Oculta o verso quando não está visível */
+    transition: transform 0.6s ease-in-out;
+}
+
+.card-front {
+    background-color: var(--color-background-black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-front img {
+    width: 140px;
+    height: auto;
+}
+
+.card-back {
+    background-color: var(--color-background-black);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg);
+    /* Inverte o verso */
+    font-size: 24px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+/* Classe para alternar o flip */
+.card-language.flipped .card-front {
+    transform: rotateY(180deg);
+}
+
+.card-language.flipped .card-back {
+    transform: rotateY(0);
+}
+
+.react {
+    animation: rotate 16s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .discord {
