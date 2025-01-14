@@ -18,6 +18,8 @@ window.addEventListener("scroll", e => {
     scrollPage()
 })
 
+alert("O site está em construção =)")
+
 function toggleMenu(event) {
     if (event.type === "touchstart") event.preventDefault()
 
