@@ -333,7 +333,7 @@ h1 span:hover::after {
     color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
     text-align: center;
 }
 

@@ -3,7 +3,7 @@ const mainLanguages = [
     { name: "Bootstrap", img: "assets/img/bootstrap.svg" },
     { name: "Java", img: "assets/img/java.svg" },
     { name: "Tailwind", img: "assets/img/tailwind.svg" },
-    { name: "NextJS", img: "assets/img/nextjs.svg" },
+
 ];
 
 function renderCardsSecondary() {
