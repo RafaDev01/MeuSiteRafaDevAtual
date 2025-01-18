@@ -391,10 +391,12 @@ h1 span:hover::after {
 }
 
 .card-front {
-    background-color: var(--color-background-black);
+    background-color: var(--color-text-white);
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 4px solid black;
+    box-shadow: 10px 6px 10px rgba(0, 0, 0, 0.895);
 }
 
 .card-front img {
@@ -404,7 +406,7 @@ h1 span:hover::after {
 
 .card-back {
     background-color: var(--color-background-black);
-    color: white;
+    color: var(--color-text-white);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -413,6 +415,7 @@ h1 span:hover::after {
     font-size: 24px;
     font-weight: bolder;
     text-align: center;
+    box-shadow: 10px 6px 10px rgba(0, 0, 0, 0.524);
 }
 
 /* Classe para alternar o flip */
@@ -607,6 +610,16 @@ h1 span:hover::after {
     text-align: center;
     transition: 1s;
 }
+
+.tech {
+    color: var(--color-background-black);
+    font-size: large;
+    font-size: 26px;
+}
+
+.main-tech {}
+
+.seconday-techs {}
 
 .work:hover.active {
     border-radius: 4px;
