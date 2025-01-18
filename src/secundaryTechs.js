@@ -1,8 +1,10 @@
 const mainLanguages = [
-    { name: "CSharp", img: "assets/img/csharp.svg" },
-    { name: "Bootstrap", img: "assets/img/bootstrap.svg" },
-    { name: "Java", img: "assets/img/java.svg" },
+    { name: "NextJS", img: "assets/img/nextjs.svg" },
     { name: "Tailwind", img: "assets/img/tailwind.svg" },
+    { name: "Bootstrap", img: "assets/img/bootstrap.svg" },
+    { name: "CSharp", img: "assets/img/csharp.svg" },
+    { name: "Java", img: "assets/img/java.svg" },
+
 
 ];
 

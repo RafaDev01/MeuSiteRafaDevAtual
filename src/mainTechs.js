@@ -1,11 +1,12 @@
 const secondaryLanguages = [
-    { name: "React", img: "assets/img/react.svg" },
     { name: "HTML", img: "assets/img/html.svg" },
     { name: "CSS", img: "assets/img/css.svg" },
     { name: "Javascript", img: "assets/img/javascript.svg" },
+    { name: "React", img: "assets/img/react.svg" },
+    { name: "Node.js", img: "assets/img/node.svg" },
+    { name: "ExpressJS", img: "assets/img/express.svg" },
     { name: "Postman", img: "assets/img/postman.svg" },
     { name: "Linux Ubuntu", img: "assets/img/ubuntu.svg" },
-    { name: "Node.js", img: "assets/img/node.svg" },
 ];
 
 function renderCardsPrincipal() {

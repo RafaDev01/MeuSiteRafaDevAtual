@@ -322,19 +322,15 @@ h1 span:hover::after {
     width: 140px;
 }
 
-.languages-icons img:hover {
-    height: 160px;
-    transition: 0.2s all ease-in;
-    width: 160px;
-}
-
 .language-container {
+    text-align: center;
     background-color: var(--color-text-white);
     color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    text-align: center;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .language-container h2 {
@@ -359,7 +355,6 @@ h1 span:hover::after {
     display: flex;
     height: 142px;
     justify-content: center;
-    margin-bottom: 64px;
     position: relative;
 }
 
@@ -615,6 +610,7 @@ h1 span:hover::after {
     color: var(--color-background-black);
     font-size: large;
     font-size: 26px;
+    padding: 44px;
 }
 
 .main-tech {}
