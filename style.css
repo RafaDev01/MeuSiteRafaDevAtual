@@ -363,12 +363,13 @@ h1 span:hover::after {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 16px;
+    /* Adiciona espaçamento fixo entre os cards */
 }
 
 .card-language {
-    width: 150px;
-    height: 200px;
-    margin: 8px;
+    width: 250px;
+    height: 250px;
     perspective: 1000px;
     /* Necessário para criar o efeito 3D */
     cursor: pointer;
@@ -390,7 +391,7 @@ h1 span:hover::after {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 4px solid black;
+    border: 4px solid rgb(0, 0, 0);
     box-shadow: 10px 6px 10px rgba(0, 0, 0, 0.895);
 }
 
@@ -411,6 +412,7 @@ h1 span:hover::after {
     font-weight: bolder;
     text-align: center;
     box-shadow: 10px 6px 10px rgba(0, 0, 0, 0.524);
+    border: 4px solid #61DAFB;
 }
 
 /* Classe para alternar o flip */
@@ -479,14 +481,6 @@ h1 span:hover::after {
 
 .apresentation-text>div {
     width: 90%;
-}
-
-.apresentation-text a {
-    color: var(--color-background-black);
-}
-
-.apresentation-text a:hover {
-    color: rgba(0, 0, 0, 0.673);
 }
 
 .name-apresentation {
@@ -778,4 +772,19 @@ h1 span:hover::after {
     height: 50px;
     justify-content: center;
     width: 100%;
+}
+
+.mb-5 {
+    margin-bottom: 50px;
+}
+
+.curriculo-link {
+    font-weight: bolder;
+    color: #16A085;
+    font-size: 24px;
+}
+
+.curriculo-link:hover {
+    color: #1ABC9C;
+    font-size: 24px;
 }
