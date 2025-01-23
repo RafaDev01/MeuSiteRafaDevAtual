@@ -9,6 +9,7 @@ const primaryLanguages = [
     { name: "ExpressJS", img: "assets/img/express.svg" },
     { name: "MySQL", img: "assets/img/mysql.svg" },
     { name: "Postman", img: "assets/img/postman.svg" },
+    { name: "Git", img: "assets/img/git.svg" },
     { name: "Linux Ubuntu", img: "assets/img/ubuntu.svg" },
 ];
 
@@ -38,3 +39,68 @@ function renderCardsPrincipal() {
 }
 
 renderCardsPrincipal();
+
+const cards = document.querySelectorAll('.card-language');
+let isFlipping = false;
+let timeoutIds = [];
+
+function isDesktop() {
+    return window.matchMedia('(min-width: 768px)').matches;
+}
+
+function resetCards() {
+    cards.forEach(card => card.classList.remove('flipped'));
+}
+
+function clearAllTimeouts() {
+    timeoutIds.forEach(id => clearTimeout(id));
+    timeoutIds = [];
+}
+
+function flipCardsSequentially() {
+    if (!isDesktop() || isFlipping) return;
+
+    isFlipping = true;
+    cards.forEach((card, index) => {
+        const timeoutId = setTimeout(() => {
+            card.classList.add('flipped');
+        }, index * 500);
+        timeoutIds.push(timeoutId);
+    });
+
+    const unflipTimeoutId = setTimeout(unflipCardsSequentially, cards.length * 500 + 2000);
+    timeoutIds.push(unflipTimeoutId);
+}
+
+function unflipCardsSequentially() {
+    Array.from(cards)
+        .reverse()
+        .forEach((card, index) => {
+            const timeoutId = setTimeout(() => {
+                card.classList.remove('flipped');
+            }, index * 500);
+            timeoutIds.push(timeoutId);
+        });
+
+    const repeatTimeoutId = setTimeout(() => {
+        isFlipping = false;
+        flipCardsSequentially();
+    }, cards.length * 500 + 2000);
+    timeoutIds.push(repeatTimeoutId);
+}
+
+function handleResize() {
+    clearAllTimeouts();
+    resetCards();
+    isFlipping = false;
+
+    if (isDesktop()) {
+        flipCardsSequentially();
+    }
+}
+
+if (isDesktop()) {
+    flipCardsSequentially();
+}
+
+window.addEventListener('resize', handleResize);
