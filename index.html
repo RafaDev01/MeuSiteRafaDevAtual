@@ -12,6 +12,7 @@
     <meta name="keywords" content="desenvolvedor, full stack, front end, back end, front-end, back-end">
     <meta name="robots" content="index, follow">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./src/projects/style.css">
     <link rel="icon" type="image/x-icon" href="assets/img/fivicon.png">
     <title>Desenvolvedor | Rafael do Nascimento</title>
 </head>
@@ -97,41 +98,7 @@
                 <div class="add--black"></div>
                 <h2>PORTFÓLIO</h2>
             </div>
-            <div class="portfolio--works">
-                <div class="work active">
-                    <span class="soon">EM BREVE</span>
-                </div>
-                <div class="work active">
-                    <span class="soon">EM BREVE</span>
-                </div>
-                <div class="work active">
-                    <span class="soon">EM BREVE</span>
-                </div>
-            </div>
-
-            <div class="btn-show btn-show-1">
-                <div class="container-btn">
-                    <button class="btn-mostrar-mais btn-show-more">Mostrar mais</button>
-                </div>
-            </div>
-
-            <div class="portfolio--works">
-                <div class="work off">
-                    <span class="soon">EM BREVE</span>
-                </div>
-                <div class="work off">
-                    <span class="soon">EM BREVE</span>
-                </div>
-                <div class="work off">
-                    <span class="soon">EM BREVE</span>
-                </div>
-            </div>
-
-            <div class="btn-show">
-                <div class="container-btn">
-                    <button class="btn-mostrar-mais btn-show-less">Mostrar menos</button>
-                </div>
-            </div>
+            <div id="projectCardContainer"></div>
         </section>
 
         <footer id="contato" class="footer">
@@ -152,7 +119,8 @@
         </footer>
     </main>
     <script src="main.js"></script>
-    <script src="./src/mainTechs.js"></script>
+    <script src="./src/techs/mainTechs.js"></script>
+    <script src="src/projects/projects.js"></script>
 </body>
 
 </html>
