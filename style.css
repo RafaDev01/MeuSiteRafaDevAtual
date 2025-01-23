@@ -310,9 +310,9 @@ h1 span:hover::after {
 .languages-icons div {
     align-items: center;
     display: flex;
-    height: 180px;
+    height: 250px;
     justify-content: center;
-    width: 180px;
+    width: 250px;
 }
 
 .languages-icons img {
@@ -326,15 +326,11 @@ h1 span:hover::after {
     text-align: center;
     background-color: var(--color-text-white);
     color: rgb(255, 255, 255);
-    display: flex;
-    flex-direction: column;
-    flex-direction: column;
-    justify-content: center;
+    align-items: center;
 }
 
 .language-container h2 {
     color: rgb(255, 255, 255);
-    position: absolute;
 }
 
 .block {
@@ -342,16 +338,21 @@ h1 span:hover::after {
     height: 100%;
     position: absolute;
     width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
 .language--top {
     align-items: center;
+    align-self: center;
     background-size: cover;
     background-image: url("https://img.freepik.com/fotos-gratis/codificacao-de-programa-de-computador-na-tela_53876-138060.jpg?t=st=1736473984~exp=1736477584~hmac=a17c7f76342fb7d138a3780c7e8aaf723734347c8bab6ae6813003d73988cfb1&w=1060");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: right;
-    display: flex;
+    display: inline-flex;
+    width: 100%;
     height: 142px;
     justify-content: center;
     position: relative;
@@ -516,6 +517,11 @@ h1 span:hover::after {
     .experience-paragraph {
         display: none;
     }
+
+    .languages-icons div {
+        height: 160px;
+        width: 160px;
+    }
 }
 
 .portfolio {
@@ -603,7 +609,8 @@ h1 span:hover::after {
     color: var(--color-background-black);
     font-size: large;
     font-size: 26px;
-    padding: 44px;
+    padding: 8px;
+    margin: 32px 0;
 }
 
 .main-tech {}

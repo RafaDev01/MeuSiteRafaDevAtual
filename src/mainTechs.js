@@ -5,6 +5,7 @@ const primaryLanguages = [
     { name: "React", img: "assets/img/react.svg" },
     { name: "NextJS", img: "assets/img/nextjs.svg" },
     { name: "Styled Components", img: "assets/img/styled-components.svg" },
+    { name: "Tailwind", img: "assets/img/tailwind.svg" },
     { name: "Node.js", img: "assets/img/node.svg" },
     { name: "ExpressJS", img: "assets/img/express.svg" },
     { name: "MySQL", img: "assets/img/mysql.svg" },
