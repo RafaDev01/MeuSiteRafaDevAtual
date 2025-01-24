@@ -1,7 +1,7 @@
 const projects = [
     {
         name: "Projeto 1",
-        technologies: ["React", "Node.js", "ExpressJS"],
+        technologies: ["React", "Node", "Express", "React", "Node", "Express"],
         link: "https://github.com/seuprojeto1",
         details: "Um projeto de dashboard interativo para monitorar gastos."
     },
@@ -28,16 +28,17 @@ function renderProjectCards() {
             .map(
                 tech => `<img src="./assets/img/${tech.toLowerCase()}.svg" alt="${tech}" title="${tech}" />`
             )
-            .join("");
+            .join("").toString().toLocaleLowerCase();
 
         const cardHTML = `
                     <div class="project-card" id="card-${project.name}">
                         <h3 class="title-project">${project.name}</h3>
                         <div class="image-container">
                             <img class="img-project" src="./assets/img/perfil.png" alt="${project.name}" />
-                            <div class="overlay hidden" id="tech-${project.name}">
+                            <div class="overlay-tech hidden" id="tech-${project.name}">
                                 ${iconsHTML}
                             </div>
+                            
                         </div>
                         <div class="actions">
                             <button onclick="toggleTechnologies('${project.name}')">Tecnologias</button>
