@@ -526,7 +526,6 @@ h1 span:hover::after {
 
 .portfolio {
     align-items: center;
-    height: 700px;
     overflow: hidden;
 }
 

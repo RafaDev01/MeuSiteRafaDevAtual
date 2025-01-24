@@ -20,26 +20,32 @@ html {
 
 #projectCardContainer {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
     padding: 16px 0;
-    gap: 16px;
+    gap: 32px;
     margin: 0 32px;
+}
+
+@media (max-width: 768px) {
+    #projectCardContainer {
+        margin: 0 4px;
+        /* Reduz a margem para dispositivos móveis */
+    }
 }
 
 /* Estilização do card */
 .project-card {
     position: relative;
-    border: 4px solid #61dafb;
+    border: 2px solid #61dafb;
     border-radius: 8px;
     background-color: #f9f9f9;
-    width: 300px;
+    width: 326px;
     height: 300px;
     overflow: hidden;
     transition: box-shadow 0.3s ease;
     box-shadow: 4px 4px 12px var(--color-background-black);
     margin-bottom: 4px;
-    position: relative;
 }
 
 /* Título do projeto */
@@ -53,7 +59,7 @@ html {
     padding: 8px 0;
     font-size: 1.2rem;
     margin: 0;
-    height: 36px;
+    height: 40px;
 }
 
 /* Estilização da imagem */
@@ -72,25 +78,42 @@ html {
     overflow: hidden;
 }
 
-
-/* Overlay para os ícones */
 .overlay-tech,
 .project-details {
-    display: flex;
-    flex-wrap: wrap;
+    color: white;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(197, 197, 197, 0.962);
+    background-color: rgba(93, 93, 93, 0.929);
     color: black;
     opacity: 0;
     visibility: hidden;
+    text-align: center;
     transition: opacity 0.5s ease, visibility 0.5s ease;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+
+.project-details {
+    text-align: left;
+    /* Alinha o texto ao início */
+    justify-content: flex-start;
+    /* Alinha horizontalmente ao início */
+    align-items: flex-start;
+    /* Alinha verticalmente ao topo */
+    padding: 8px;
+    /* Adiciona um espaçamento interno */
+    overflow-y: auto;
+    /* Permite rolagem se o conteúdo for maior que a altura */
+
 }
 
 .overlay-tech.visible,
@@ -101,7 +124,8 @@ html {
 
 .overlay-tech img {
     width: 76px;
-    margin: 0 12px;
+    height: 76px;
+    margin: 0 12px
 }
 
 /* Botões de ação */
@@ -114,12 +138,14 @@ html {
     cursor: pointer;
     flex: 1;
     font-size: 0.9rem;
-    position: absolute;
     bottom: 0;
     width: 100%;
+    margin-bottom: 32px;
+
 }
 
 .actions button {
+    width: 100%;
     font-weight: bolder;
     border-radius: 8px;
     background-color: black;
@@ -130,10 +156,8 @@ html {
     margin: 0;
     transition: all 0.2s ease-in-out;
     height: 36px;
-    border: none;
-    margin: 8px;
     border: 2px solid #61dafb;
-    ;
+    box-shadow: 4px 4px 12px var(--color-background-black);
 }
 
 .actions button:hover {
@@ -150,7 +174,7 @@ html {
     text-align: justify;
     padding: 16px;
     font-size: 1rem;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 .hidden {

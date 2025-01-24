@@ -1,6 +1,42 @@
 const projects = [
     {
         name: "Projeto 1",
+        technologies: ["React", "Node", "Express", "React", "Node", "Express", "React", "Node", "Express"],
+        link: "https://github.com/seuprojeto1",
+        details: "Um projeto de dashboard interativo para monitorar gastos."
+    },
+    {
+        name: "Projeto 2",
+        technologies: ["NextJS", "Tailwind"],
+        link: "https://github.com/seuprojeto2",
+        details: "Aplicação de e-commerce com design responsivo."
+    },
+    {
+        name: "Projeto 3",
+        technologies: ["HTML", "CSS", "JavaScript"],
+        link: "https://github.com/seuprojeto3",
+        details: "Um site institucional moderno e otimizado para SEO."
+    },
+    {
+        name: "Projeto 4",
+        technologies: ["React", "Node", "Express", "React", "Node", "Express"],
+        link: "https://github.com/seuprojeto1",
+        details: "Um projeto de dashboard interativo para monitorar gastos."
+    },
+    {
+        name: "Projeto 5",
+        technologies: ["NextJS", "Tailwind"],
+        link: "https://github.com/seuprojeto2",
+        details: "Aplicação de e-commerce com design responsivo."
+    },
+    {
+        name: "Projeto 3",
+        technologies: ["HTML", "CSS", "JavaScript"],
+        link: "https://github.com/seuprojeto3",
+        details: "Um site institucional moderno e otimizado para SEO."
+    },
+    {
+        name: "Projeto 1",
         technologies: ["React", "Node", "Express", "React", "Node", "Express"],
         link: "https://github.com/seuprojeto1",
         details: "Um projeto de dashboard interativo para monitorar gastos."
@@ -50,16 +86,20 @@ function renderProjectCards() {
 
         const cardHTML = `
             <div>
+            <h3 class="title-project">${project.name}</h3>
                 <div class="project-card" id="card-${project.name}">
-                <h3 class="title-project">${project.name}</h3>
                 <div class="image-container">
                     <img class="img-project" src="./assets/img/perfil.png" alt="${project.name}" />
-                    <div class="overlay-tech hidden" id="tech-${project.name}">
+                    <div>
+                        <div class="overlay-tech hidden" id="tech-${project.name}">
                         ${iconsHTML}
                     </div>
                     <div class="project-details hidden" id="details-${project.name}">
                         <p>${project.details}</p>
                     </div>
+                    </div>
+                </div>
+                
                 </div>
                 <div class="actions">
                         <button onclick="toggleTechnologies('${project.name}')">Tecnologias</button>
@@ -68,8 +108,7 @@ function renderProjectCards() {
                 </div>
                 
             </div>
-                
-            </div>
+            
         `;
         cardContainer.innerHTML += cardHTML;
     });
