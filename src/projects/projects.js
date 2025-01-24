@@ -28,28 +28,27 @@ function renderProjectCards() {
             .map(
                 tech => `<img src="./assets/img/${tech.toLowerCase()}.svg" alt="${tech}" title="${tech}" />`
             )
-            .join("").toString().toLocaleLowerCase();
+            .join("");
 
         const cardHTML = `
-                    <div class="project-card" id="card-${project.name}">
-                        <h3 class="title-project">${project.name}</h3>
-                        <div class="image-container">
-                            <img class="img-project" src="./assets/img/perfil.png" alt="${project.name}" />
-                            <div class="overlay-tech hidden" id="tech-${project.name}">
-                                ${iconsHTML}
-                            </div>
-                            
-                        </div>
-                        <div class="actions">
-                            <button onclick="toggleTechnologies('${project.name}')">Tecnologias</button>
-                            <button onclick="goToLink('${project.link}')">Ver Projeto</button>
-                            <button onclick="toggleDetails('${project.name}')">Mais Detalhes</button>
-                        </div>
-                        <div class="project-details hidden" id="details-${project.name}">
-                            <p>${project.details}</p>
-                        </div>
+            <div class="project-card" id="card-${project.name}">
+                <h3 class="title-project">${project.name}</h3>
+                <div class="image-container">
+                    <img class="img-project" src="./assets/img/perfil.png" alt="${project.name}" />
+                    <div class="overlay-tech hidden" id="tech-${project.name}">
+                        ${iconsHTML}
                     </div>
-                `;
+                    <div class="project-details hidden" id="details-${project.name}">
+                        <p>${project.details}</p>
+                    </div>
+                </div>
+                <div class="actions">
+                    <button onclick="toggleTechnologies('${project.name}')">Tecnologias</button>
+                    <button onclick="toggleDetails('${project.name}')">Detalhes</button>
+                    <button onclick="goToLink('${project.link}')">Deploy</button>
+                </div>
+            </div>
+        `;
         cardContainer.innerHTML += cardHTML;
     });
 }
@@ -58,30 +57,31 @@ function toggleTechnologies(projectName) {
     const techDiv = document.getElementById(`tech-${projectName}`);
     const detailsDiv = document.getElementById(`details-${projectName}`);
 
-    // Esconde os detalhes, se estiverem visíveis
-    if (!detailsDiv.classList.contains("hidden")) {
+    // Alterna a exibição de tecnologias e garante que detalhes sejam ocultados
+    if (!techDiv.classList.contains("visible")) {
+        detailsDiv.classList.remove("visible");
         detailsDiv.classList.add("hidden");
     }
-
-    // Alterna a exibição das tecnologias
     techDiv.classList.toggle("hidden");
+    techDiv.classList.toggle("visible");
 }
 
 function toggleDetails(projectName) {
     const techDiv = document.getElementById(`tech-${projectName}`);
     const detailsDiv = document.getElementById(`details-${projectName}`);
 
-    // Esconde as tecnologias, se estiverem visíveis
-    if (!techDiv.classList.contains("hidden")) {
+    // Alterna a exibição de detalhes e garante que tecnologias sejam ocultadas
+    if (!detailsDiv.classList.contains("visible")) {
+        techDiv.classList.remove("visible");
         techDiv.classList.add("hidden");
     }
-
-    // Alterna a exibição dos detalhes
     detailsDiv.classList.toggle("hidden");
+    detailsDiv.classList.toggle("visible");
 }
 
 function goToLink(link) {
     window.open(link, "_blank");
 }
 
+// Renderiza os cards ao carregar a página
 renderProjectCards();
