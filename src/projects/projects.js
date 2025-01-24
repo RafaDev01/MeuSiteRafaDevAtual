@@ -16,6 +16,24 @@ const projects = [
         technologies: ["HTML", "CSS", "JavaScript"],
         link: "https://github.com/seuprojeto3",
         details: "Um site institucional moderno e otimizado para SEO."
+    },
+    {
+        name: "Projeto 1",
+        technologies: ["React", "Node", "Express", "React", "Node", "Express"],
+        link: "https://github.com/seuprojeto1",
+        details: "Um projeto de dashboard interativo para monitorar gastos."
+    },
+    {
+        name: "Projeto 2",
+        technologies: ["NextJS", "Tailwind"],
+        link: "https://github.com/seuprojeto2",
+        details: "Aplicação de e-commerce com design responsivo."
+    },
+    {
+        name: "Projeto 3",
+        technologies: ["HTML", "CSS", "JavaScript"],
+        link: "https://github.com/seuprojeto3",
+        details: "Um site institucional moderno e otimizado para SEO."
     }
 ];
 
@@ -31,7 +49,8 @@ function renderProjectCards() {
             .join("");
 
         const cardHTML = `
-            <div class="project-card" id="card-${project.name}">
+            <div>
+                <div class="project-card" id="card-${project.name}">
                 <h3 class="title-project">${project.name}</h3>
                 <div class="image-container">
                     <img class="img-project" src="./assets/img/perfil.png" alt="${project.name}" />
@@ -43,10 +62,13 @@ function renderProjectCards() {
                     </div>
                 </div>
                 <div class="actions">
-                    <button onclick="toggleTechnologies('${project.name}')">Tecnologias</button>
-                    <button onclick="toggleDetails('${project.name}')">Detalhes</button>
-                    <button onclick="goToLink('${project.link}')">Deploy</button>
+                        <button onclick="toggleTechnologies('${project.name}')">Tecnologias</button>
+                        <button onclick="toggleDetails('${project.name}')">Detalhes</button>
+                        <button onclick="goToLink('${project.link}')">Deploy</button>
                 </div>
+                
+            </div>
+                
             </div>
         `;
         cardContainer.innerHTML += cardHTML;
