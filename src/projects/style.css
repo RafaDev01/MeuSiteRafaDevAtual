@@ -39,7 +39,6 @@ html {
     position: relative;
     border: 2px solid #61dafb;
     border-radius: 8px;
-    background-color: #f9f9f9;
     width: 326px;
     height: 300px;
     overflow: hidden;
@@ -58,8 +57,10 @@ html {
     color: var(--color-text-white);
     padding: 8px 0;
     font-size: 1.2rem;
-    margin: 0;
+    margin: 2px 0;
     height: 40px;
+    border-radius: 4px;
+    border: 2px solid #61dafb;
 }
 
 /* Estilização da imagem */
@@ -98,7 +99,6 @@ html {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-
 }
 
 
@@ -113,7 +113,6 @@ html {
     /* Adiciona um espaçamento interno */
     overflow-y: auto;
     /* Permite rolagem se o conteúdo for maior que a altura */
-
 }
 
 .overlay-tech.visible,
@@ -141,27 +140,27 @@ html {
     bottom: 0;
     width: 100%;
     margin-bottom: 32px;
-
+    padding: 4px;
 }
 
 .actions button {
     width: 100%;
     font-weight: bolder;
     border-radius: 8px;
-    background-color: black;
+    background-color: var(--color-background-black);
     color: white;
     cursor: pointer;
     flex: 1;
     font-size: 0.9rem;
     margin: 0;
     transition: all 0.2s ease-in-out;
-    height: 36px;
+    height: 48px;
     border: 2px solid #61dafb;
     box-shadow: 4px 4px 12px var(--color-background-black);
 }
 
 .actions button:hover {
-    background-color: rgba(0, 12, 14, 0.8);
+    background-color: rgb(0, 79, 97);
 }
 
 .actions button:active {

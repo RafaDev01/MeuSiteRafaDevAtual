@@ -1,77 +1,62 @@
 const projects = [
     {
-        name: "Projeto 1",
-        technologies: ["React", "Node", "Express", "React", "Node", "Express", "React", "Node", "Express"],
-        link: "https://github.com/seuprojeto1",
-        details: "Um projeto de dashboard interativo para monitorar gastos."
-    },
-    {
-        name: "Projeto 2",
-        technologies: ["NextJS", "Tailwind"],
-        link: "https://github.com/seuprojeto2",
-        details: "Aplicação de e-commerce com design responsivo."
-    },
-    {
-        name: "Projeto 3",
+        name: "Golf Burguer",
         technologies: ["HTML", "CSS", "JavaScript"],
-        link: "https://github.com/seuprojeto3",
-        details: "Um site institucional moderno e otimizado para SEO."
+        link: "https://golf-burguer.vercel.app/",
+        img: "golf-burguer.webp",
+        details: "Projeto desenvolvido para promover uma ação social."
     },
     {
-        name: "Projeto 4",
-        technologies: ["React", "Node", "Express", "React", "Node", "Express"],
-        link: "https://github.com/seuprojeto1",
-        details: "Um projeto de dashboard interativo para monitorar gastos."
-    },
-    {
-        name: "Projeto 5",
-        technologies: ["NextJS", "Tailwind"],
-        link: "https://github.com/seuprojeto2",
-        details: "Aplicação de e-commerce com design responsivo."
-    },
-    {
-        name: "Projeto 3",
+        name: "4Fun Café",
         technologies: ["HTML", "CSS", "JavaScript"],
-        link: "https://github.com/seuprojeto3",
-        details: "Um site institucional moderno e otimizado para SEO."
+        link: "https://4funcafe.vercel.app/",
+        img: "4funcafe.webp",
+        details: "Site responsivo criado para apresentar um catálogo de canecas personalizadas, utilizando manipulação do DOM para funcionalidades dinâmicas."
     },
     {
-        name: "Projeto 1",
-        technologies: ["React", "Node", "Express", "React", "Node", "Express"],
-        link: "https://github.com/seuprojeto1",
-        details: "Um projeto de dashboard interativo para monitorar gastos."
-    },
-    {
-        name: "Projeto 2",
-        technologies: ["NextJS", "Tailwind"],
-        link: "https://github.com/seuprojeto2",
-        details: "Aplicação de e-commerce com design responsivo."
-    },
-    {
-        name: "Projeto 3",
+        name: "Pokedex",
         technologies: ["HTML", "CSS", "JavaScript"],
-        link: "https://github.com/seuprojeto3",
-        details: "Um site institucional moderno e otimizado para SEO."
+        link: "https://pokemon-deck-five.vercel.app/",
+        img: "pokedex.webp",
+        details: "Simulação de uma Pokédex do universo Pokémon. Realiza o consumo de uma API pública para exibir informações detalhadas sobre os Pokémons selecionados."
     },
     {
-        name: "Projeto 1",
-        technologies: ["React", "Node", "Express", "React", "Node", "Express"],
-        link: "https://github.com/seuprojeto1",
-        details: "Um projeto de dashboard interativo para monitorar gastos."
-    },
-    {
-        name: "Projeto 2",
-        technologies: ["NextJS", "Tailwind"],
-        link: "https://github.com/seuprojeto2",
-        details: "Aplicação de e-commerce com design responsivo."
-    },
-    {
-        name: "Projeto 3",
+        name: "Conecta Periferia",
         technologies: ["HTML", "CSS", "JavaScript"],
-        link: "https://github.com/seuprojeto3",
-        details: "Um site institucional moderno e otimizado para SEO."
+        link: "https://conectaperiferia.vercel.app/",
+        img: "conecta-periferia.webp",
+        details: "Site fictício e responsivo criado como parte de um projeto de TCC, focado em promover a inclusão digital e o fortalecimento de comunidades periféricas."
+    },
+    {
+        name: "Tela de Login",
+        technologies: ["HTML", "CSS", "JavaScript"],
+        link: "https://pagina-de-log-in-lol.vercel.app/#",
+        img: "lol.webp",
+        details: "Interface de login inspirada no universo do League of Legends, com design atraente"
+    },
+    {
+        name: "Gerador de Senhas",
+        technologies: ["HTML", "CSS", "JavaScript"],
+        link: "https://gerador-de-senha-one.vercel.app/",
+        img: "gerador-senha.webp",
+        details: "Ferramenta para gerar senhas aleatórias, permitindo ao usuário definir a quantidade de caracteres desejada para maior personalização."
+    },
+    {
+        name: "Mario Jump",
+        technologies: ["HTML", "CSS", "JavaScript"],
+        link: "https://mario-game-cyan.vercel.app/",
+        img: "mario-jump.webp",
+        details: "Jogo simples e interativo inspirado no universo Mario. Criado para explorar funcionalidades básicas das tecnologias web."
+    },
+    {
+        name: "Clone Google",
+        technologies: ["HTML", "CSS"],
+        link: "https://clone-google2.vercel.app",
+        img: "google.webp",
+        details: "Clone da página inicial de busca do Google, recriado com fidelidade ao design original para prática de habilidades em HTML e CSS."
     }
 ];
+
 
 function renderProjectCards() {
     const cardContainer = document.getElementById("projectCardContainer");
@@ -89,7 +74,7 @@ function renderProjectCards() {
             <h3 class="title-project">${project.name}</h3>
                 <div class="project-card" id="card-${project.name}">
                 <div class="image-container">
-                    <img class="img-project" src="./assets/img/perfil.png" alt="${project.name}" />
+                    <img class="img-project" src="./assets/img/projects/${project.img}" alt="${project.name}" />
                     <div>
                         <div class="overlay-tech hidden" id="tech-${project.name}">
                         ${iconsHTML}
