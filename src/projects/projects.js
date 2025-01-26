@@ -4,92 +4,92 @@ const projects = [
         technologies: ["React-Native"],
         link: "https://github.com/RafaDev01/etec-atividade-perfil",
         img: "perfil.webp",
-        details: "Simulando uma página de perfil desenvolvida em uma atividade da ETEC."
+        details: "Aplicativo desenvolvido em React Native simulando uma página de perfil, com foco em explorar componentes e funcionalidades nativas da plataforma."
     },
     {
         name: "To-do-list full stack",
-        technologies: ["HTML", "CSS", "JavaScript", "Bootstrap", "Node", "express", "MySQL"],
+        technologies: ["HTML", "CSS", "JavaScript", "Bootstrap", "Node", "Express", "MySQL"],
         link: "https://github.com/RafaDev01/lista-de-tarefas-full-stack",
         img: "todolist.webp",
-        details: "Uma lista de tarefas full stack."
+        details: "Uma aplicação full stack de lista de tarefas com frontend responsivo em Bootstrap, backend em Node.js e banco de dados MySQL para gerenciamento de tarefas."
     },
     {
         name: "Golf Burguer",
         technologies: ["HTML", "CSS", "JavaScript"],
         link: "https://golf-burguer.vercel.app/",
         img: "golf-burguer.webp",
-        details: "Projeto desenvolvido para promover uma ação social."
+        details: "Landing page desenvolvida com foco em responsividade e design atraente para promover uma ação social."
     },
     {
         name: "4Fun Café",
         technologies: ["HTML", "CSS", "JavaScript"],
         link: "https://4funcafe.vercel.app/",
         img: "4funcafe.webp",
-        details: "Site responsivo criado para apresentar um catálogo de canecas personalizadas, utilizando manipulação do DOM para funcionalidades dinâmicas."
+        details: "Site responsivo para um catálogo de canecas personalizadas, utilizando JavaScript para implementar funcionalidades dinâmicas, como navegação interativa."
     },
     {
         name: "Pokedex",
         technologies: ["HTML", "CSS", "JavaScript"],
         link: "https://pokemon-deck-five.vercel.app/",
         img: "pokedex.webp",
-        details: "Simulação de uma Pokédex do universo Pokémon. Realiza o consumo de uma API pública para exibir informações detalhadas sobre os Pokémons selecionados."
+        details: "Simulação de uma Pokédex que consome uma API pública para exibir informações detalhadas sobre os Pokémons."
     },
     {
         name: "Conecta Periferia",
         technologies: ["HTML", "CSS", "JavaScript"],
         link: "https://conectaperiferia.vercel.app/",
         img: "conecta-periferia.webp",
-        details: "Site fictício e responsivo criado como parte de um projeto de TCC, focado em promover a inclusão digital e o fortalecimento de comunidades periféricas."
+        details: "Projeto de TCC focado na inclusão digital e no fortalecimento de comunidades periféricas, com design responsivo e navegação intuitiva."
     },
     {
         name: "DigBank",
         technologies: ["CSharp"],
         link: "https://github.com/RafaDev01/DigBank",
         img: "bank.webp",
-        details: "Simulação de um banco via terminal."
+        details: "Simulação de um sistema bancário via terminal, explorando conceitos de POO e boas práticas em C#."
     },
     {
         name: "Tela de Login",
         technologies: ["HTML", "CSS", "JavaScript"],
         link: "https://pagina-de-log-in-lol.vercel.app/#",
         img: "lol.webp",
-        details: "Interface de login inspirada no universo do League of Legends, com design atraente"
+        details: "Interface de login estilizada, inspirada no universo de League of Legends, com foco em design visual e experiência do usuário."
     },
     {
         name: "Gerador de Senhas",
         technologies: ["HTML", "CSS", "JavaScript"],
         link: "https://gerador-de-senha-one.vercel.app/",
         img: "gerador-senha.webp",
-        details: "Ferramenta para gerar senhas aleatórias, permitindo ao usuário definir a quantidade de caracteres desejada para maior personalização."
+        details: "Ferramenta para gerar senhas aleatórias, permitindo configuração personalizada."
     },
     {
         name: "Jogo da velha",
         technologies: ["HTML", "CSS", "JavaScript"],
         link: "https://jogo-da-velha-silk-tau.vercel.app/",
         img: "tic-tac-toe.webp",
-        details: "Jogo da velha para jogar em duas pessoas."
+        details: "Jogo da velha para duas pessoas, desenvolvido com HTML, CSS e JavaScript, com interface amigável."
     },
     {
         name: "Mario Jump",
         technologies: ["HTML", "CSS", "JavaScript"],
         link: "https://mario-game-cyan.vercel.app/",
         img: "mario-jump.webp",
-        details: "Jogo simples e interativo inspirado no universo Mario. Criado para explorar funcionalidades básicas das tecnologias web."
+        details: "Jogo interativo inspirado no universo Mario, desenvolvido para explorar animações e interações básicas com JavaScript."
     },
     {
         name: "Clone Google",
         technologies: ["HTML", "CSS"],
         link: "https://clone-google2.vercel.app",
         img: "google.webp",
-        details: "Clone da página inicial de busca do Google, recriado com fidelidade ao design original para prática de habilidades em HTML e CSS."
+        details: "Clone fiel da página inicial de busca do Google, criado para praticar habilidades de design responsivo e semântica em HTML e CSS."
     },
     {
         name: "Pokemon Game",
         technologies: ["Java"],
         link: "https://github.com/RafaDev01/jogoJavaFacul",
         img: "pokemon.webp",
-        details: "Meu primeiro projeto; é um jogo de console utilizando POO."
-    },
+        details: "Jogo de console simples, desenvolvido como primeiro projeto utilizando conceitos de Programação Orientada a Objetos em Java."
+    }
 ];
 
 

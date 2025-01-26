@@ -37,10 +37,10 @@ html {
 /* Estilização do card */
 .project-card {
     position: relative;
-    border: 2px solid #61dafb;
+    border: 2px solid var(--color-background-black);
     border-radius: 8px;
-    width: 326px;
-    height: 300px;
+    width: 360px;
+    height: 360px;
     overflow: hidden;
     transition: box-shadow 0.3s ease;
     box-shadow: 4px 4px 12px var(--color-background-black);
@@ -60,7 +60,7 @@ html {
     margin: 2px 0;
     height: 40px;
     border-radius: 4px;
-    border: 2px solid #61dafb;
+    border: 2px solid #000000;
 }
 
 /* Estilização da imagem */
@@ -75,7 +75,7 @@ html {
 .image-container {
     position: relative;
     width: 100%;
-    height: 300px;
+    height: 100%;
     overflow: hidden;
 }
 
@@ -155,12 +155,12 @@ html {
     margin: 0;
     transition: all 0.2s ease-in-out;
     height: 48px;
-    border: 2px solid #61dafb;
+    border: 2px solid var(--color-background-black);
     box-shadow: 4px 4px 12px var(--color-background-black);
 }
 
 .actions button:hover {
-    background-color: rgb(0, 79, 97);
+    background-color: black;
 }
 
 .actions button:active {
