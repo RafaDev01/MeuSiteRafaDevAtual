@@ -524,36 +524,6 @@ h1 span:hover::after {
     }
 }
 
-.portfolio {
-    align-items: center;
-    overflow: hidden;
-}
-
-.portfolio.active {
-    align-items: center;
-    height: 1020px;
-}
-
-@media (max-width: 1171px) {
-    .portfolio {
-        height: 1100px;
-    }
-
-    .portfolio.active {
-        height: 1780px;
-    }
-}
-
-@media (max-width: 788px) {
-    .portfolio {
-        height: 1500px;
-    }
-
-    .portfolio.active {
-        height: 2560px;
-    }
-}
-
 .portfolio--top {
     align-items: center;
     background-size: cover;

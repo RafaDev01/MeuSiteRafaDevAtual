@@ -1,5 +1,19 @@
 const projects = [
     {
+        name: "Perfil",
+        technologies: ["React-Native"],
+        link: "https://github.com/RafaDev01/etec-atividade-perfil",
+        img: "perfil.webp",
+        details: "Simulando uma página de perfil desenvolvida em uma atividade da ETEC."
+    },
+    {
+        name: "To-do-list full stack",
+        technologies: ["HTML", "CSS", "JavaScript", "Bootstrap", "Node", "express", "MySQL"],
+        link: "https://github.com/RafaDev01/lista-de-tarefas-full-stack",
+        img: "todolist.webp",
+        details: "Uma lista de tarefas full stack."
+    },
+    {
         name: "Golf Burguer",
         technologies: ["HTML", "CSS", "JavaScript"],
         link: "https://golf-burguer.vercel.app/",
@@ -28,6 +42,13 @@ const projects = [
         details: "Site fictício e responsivo criado como parte de um projeto de TCC, focado em promover a inclusão digital e o fortalecimento de comunidades periféricas."
     },
     {
+        name: "DigBank",
+        technologies: ["CSharp"],
+        link: "https://github.com/RafaDev01/DigBank",
+        img: "bank.webp",
+        details: "Simulação de um banco via terminal."
+    },
+    {
         name: "Tela de Login",
         technologies: ["HTML", "CSS", "JavaScript"],
         link: "https://pagina-de-log-in-lol.vercel.app/#",
@@ -42,6 +63,13 @@ const projects = [
         details: "Ferramenta para gerar senhas aleatórias, permitindo ao usuário definir a quantidade de caracteres desejada para maior personalização."
     },
     {
+        name: "Jogo da velha",
+        technologies: ["HTML", "CSS", "JavaScript"],
+        link: "https://jogo-da-velha-silk-tau.vercel.app/",
+        img: "tic-tac-toe.webp",
+        details: "Jogo da velha para jogar em duas pessoas."
+    },
+    {
         name: "Mario Jump",
         technologies: ["HTML", "CSS", "JavaScript"],
         link: "https://mario-game-cyan.vercel.app/",
@@ -54,7 +82,14 @@ const projects = [
         link: "https://clone-google2.vercel.app",
         img: "google.webp",
         details: "Clone da página inicial de busca do Google, recriado com fidelidade ao design original para prática de habilidades em HTML e CSS."
-    }
+    },
+    {
+        name: "Pokemon Game",
+        technologies: ["Java"],
+        link: "https://github.com/RafaDev01/jogoJavaFacul",
+        img: "pokemon.webp",
+        details: "Meu primeiro projeto; é um jogo de console utilizando POO."
+    },
 ];
 
 
@@ -63,38 +98,40 @@ function renderProjectCards() {
     cardContainer.innerHTML = ""; // Limpa o conteúdo existente
 
     projects.forEach(project => {
+        // Gera o HTML dos ícones das tecnologias
         const iconsHTML = project.technologies
-            .map(
-                tech => `<img src="./assets/img/${tech.toLowerCase()}.svg" alt="${tech}" title="${tech}" />`
-            )
+            .map(tech => {
+                const fileExtension = tech === "React-Native" ? "webp" : "svg";
+                return `<img src="./assets/img/${tech.toLowerCase()}.${fileExtension}" alt="${tech}" title="${tech}" />`;
+            })
             .join("");
 
+        // Gera o HTML do card do projeto
         const cardHTML = `
             <div>
-            <h3 class="title-project">${project.name}</h3>
+                <h3 class="title-project">${project.name}</h3>
                 <div class="project-card" id="card-${project.name}">
-                <div class="image-container">
-                    <img class="img-project" src="./assets/img/projects/${project.img}" alt="${project.name}" />
-                    <div>
-                        <div class="overlay-tech hidden" id="tech-${project.name}">
-                        ${iconsHTML}
+                    <div class="image-container">
+                        <img class="img-project" src="./assets/img/projects/${project.img}" alt="${project.name}" />
+                        <div>
+                            <div class="overlay-tech hidden" id="tech-${project.name}">
+                                ${iconsHTML}
+                            </div>
+                            <div class="project-details hidden" id="details-${project.name}">
+                                <p>${project.details}</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="project-details hidden" id="details-${project.name}">
-                        <p>${project.details}</p>
-                    </div>
-                    </div>
-                </div>
-                
                 </div>
                 <div class="actions">
-                        <button onclick="toggleTechnologies('${project.name}')">Tecnologias</button>
-                        <button onclick="toggleDetails('${project.name}')">Detalhes</button>
-                        <button onclick="goToLink('${project.link}')">Deploy</button>
+                    <button onclick="toggleTechnologies('${project.name}')">Tecnologias</button>
+                    <button onclick="toggleDetails('${project.name}')">Detalhes</button>
+                    <button onclick="goToLink('${project.link}')">Deploy</button>
                 </div>
-                
             </div>
-            
         `;
+
+        // Adiciona o card ao container
         cardContainer.innerHTML += cardHTML;
     });
 }
