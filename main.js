@@ -49,11 +49,21 @@ btnMobile.addEventListener("click", toggleMenu)
 btnMobile.addEventListener("touchstart", toggleMenu);
 
 menuLink.forEach(elemento => {
-    elemento.addEventListener("click", () => {
+    elemento.addEventListener("click", (event) => {
+        event.preventDefault();
+
         nav.classList.toggle("active")
         body.classList.toggle("active")
-    })
-})
+
+        const destino = document.querySelector(elemento.getAttribute("href"));
+
+        if (destino) {
+            setTimeout(() => {
+                destino.scrollIntoView({ behavior: "smooth" });
+            }, 800);
+        }
+    });
+});
 
 async function copiarTexto() {
     try {
