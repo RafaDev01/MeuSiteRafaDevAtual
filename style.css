@@ -138,7 +138,7 @@ html {
     margin-right: 50px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 848px) {
     .menu {
         margin-right: 0;
         font-size: 2rem;
