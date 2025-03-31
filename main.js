@@ -126,6 +126,7 @@ function mouseHoverWork(elemento) {
     elemento.addEventListener("mouseenter", eventAdd);
 }
 
+/*
 btnShowMore.addEventListener("click", () => {
     btnShowMore.classList.add("btn-down")
     setTimeout(() => {
@@ -139,7 +140,9 @@ btnShowMore.addEventListener("click", () => {
         })
     }, 500)
 })
+*/
 
+/*
 btnShowLess.addEventListener("click", () => {
     btnShowLess.classList.add("btn-up")
     setTimeout(() => {
@@ -155,6 +158,7 @@ btnShowLess.addEventListener("click", () => {
         })
     }, 500)
 })
+*/
 
 const addHoverWork = () => {
     works.forEach(elemento => {
