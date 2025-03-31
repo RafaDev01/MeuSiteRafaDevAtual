@@ -138,6 +138,7 @@ html {
     margin-right: 50px;
 }
 
+
 .whatsapp-fixo {
     width: 120px;
     height: 120px;
@@ -164,6 +165,25 @@ html {
         width: 80px;
         height: 80px;
         position: fixed;
+    }
+
+    .box-models {
+        padding: 0;
+    }
+
+    .box-models h2 {
+        display: none;
+    }
+
+    .span-modelos {
+        padding-top: 0px;
+    }
+
+    .span-modelos a {
+        font-size: 2.5em;
+        font-weight: bolder;
+        color: #61DAFB;
+        text-decoration: none;
     }
 
 
@@ -334,6 +354,40 @@ h1 span:hover::after {
     height: 40px;
     transition: 0.2s all ease-in;
     width: 40px;
+}
+
+.span-modelos {
+    padding-top: 50px;
+}
+
+.span-modelos a {
+    font-size: 2.5em;
+    font-weight: bolder;
+    color: #61DAFB;
+    text-decoration: none;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.gradient-text {
+    font-weight: bold;
+    background: linear-gradient(45deg, #ff00dd, #61DAFB, rgba(255, 251, 1, 0.829), #ff0000);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 2s ease infinite;
 }
 
 .languages-icons div {
