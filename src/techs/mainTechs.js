@@ -12,6 +12,7 @@ const primaryLanguages = [
     { name: "Postman", img: "assets/img/postman.svg" },
     { name: "Git", img: "assets/img/git.svg" },
     { name: "Linux Ubuntu", img: "assets/img/ubuntu.svg" },
+    { name: "Unified modeling language", img: "assets/img/uml.svg" },
 ];
 
 function renderCardsPrincipal() {

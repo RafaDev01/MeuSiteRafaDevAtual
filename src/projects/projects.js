@@ -1,7 +1,14 @@
 const projects = [
     {
+        "name": "Na Faixa",
+        "technologies": ["React-Native", "React", "styled-components", "Node", "Express", "MySQL", "Postman", "Git"],
+        "link": "https://www.youtube.com/watch?v=eTCbDVuNkWc",
+        "img": "na-faixa.webp",
+        "details": "Projeto desenvolvido como Trabalho de Conclusão de Curso (TCC) na ETEC. O 'Na Faixa' é um aplicativo criado para motoristas de aplicativos monitorarem seus gastos com o veículo. A plataforma permite o registro de despesas, previsão de custos futuros e emissão de alertas para controle financeiro. Desenvolvi toda a lógica do sistema, incluindo backend, banco de dados, diagramas e frontend web."
+    },
+    {
         name: "Perfil",
-        technologies: ["React-Native"],
+        technologies: ["React-Native", "css"],
         link: "https://github.com/RafaDev01/etec-atividade-perfil",
         img: "perfil.webp",
         details: "Aplicativo desenvolvido em React Native simulando uma página de perfil, com foco em explorar componentes e funcionalidades nativas da plataforma."
