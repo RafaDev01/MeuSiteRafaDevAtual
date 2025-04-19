@@ -186,7 +186,6 @@ html {
         text-decoration: none;
     }
 
-
     .menu {
         margin-right: 0;
         font-size: 2rem;
@@ -367,6 +366,63 @@ h1 span:hover::after {
     text-decoration: none;
 }
 
+.btn-animado {
+    position: relative;
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 2em;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    background: #111;
+    border-radius: 16px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* Texto animado com gradiente */
+.btn-animado .btn-text {
+    position: relative;
+    z-index: 2;
+    font-weight: bold;
+    background: linear-gradient(45deg, #ff00dd, #61DAFB, #facc15, #ff0000);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 3s ease infinite;
+}
+
+/* Máscara escura que cobre o centro do botão */
+.btn-animado::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    right: 3px;
+    bottom: 3px;
+    background: #000000da;
+    border-radius: 14px;
+    z-index: 1;
+}
+
+/* Efeito de borda animada sincronizada com o texto */
+.btn-animado::before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: -40px;
+    right: -40px;
+    bottom: -40px;
+    border-radius: 20px;
+    z-index: 0;
+    border: 2px solid transparent;
+    background: linear-gradient(45deg, #ff00dd, #61DAFB, #5eff00, #ff0000);
+    background-size: 300% 300%;
+    animation: gradient 2s ease infinite;
+    filter: blur(6px);
+}
+
+/* Animação que move o gradiente */
 @keyframes gradient {
     0% {
         background-position: 0% 50%;
@@ -379,15 +435,6 @@ h1 span:hover::after {
     100% {
         background-position: 0% 50%;
     }
-}
-
-.gradient-text {
-    font-weight: bold;
-    background: linear-gradient(45deg, #ff00dd, #61DAFB, rgba(255, 251, 1, 0.829), #ff0000);
-    background-size: 300% 300%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: gradient 2s ease infinite;
 }
 
 .languages-icons div {
