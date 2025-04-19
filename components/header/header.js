@@ -32,7 +32,7 @@ function initializeNavigation() {
 
         modelInfo.textContent = `Modelo ${modelNumber}`;
 
-        const baseUrl = `${window.location.origin}/MeuSiteRafaDevAtual/src/pages/modelos`;
+        const baseUrl = `${window.location.origin}/src/pages/modelos`;
 
         if (modelNumber <= 1) {
             prevButton.disabled = true;
