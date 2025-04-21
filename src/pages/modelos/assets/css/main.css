@@ -1052,7 +1052,10 @@ body.is-preload-1 #main {
 /* Footer */
 
 #footer {
+	display: flex;
+	flex-direction: column;
 	padding: 2.25em 2.25em 1em 2.25em;
+	justify-content: end;
 }
 
 #footer .copyright {
