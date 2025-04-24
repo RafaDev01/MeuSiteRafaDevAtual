@@ -10,7 +10,7 @@ const projects = [
         "name": "PokeNext",
         "technologies": ["TypeScript", "Nextjs", "React", "Tailwind", "Git"],
         "link": "https://pokemon-nextjs-1s2qg143a-rafadev01s-projects.vercel.app/",
-        "img": "na-faixa.webp",
+        "img": "pokenext.webp",
         "details": "Projeto desenvolvido para aprimorar habilidades, o projeto consome a API do pokemon e possui design responsivo utilizando tailwind."
     },
     {
