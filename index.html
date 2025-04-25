@@ -17,7 +17,6 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicons/favicon-16x16.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="./src/projects/style.css">
-    <link rel="icon" type="image/x-icon" href="assets/img/fivicon.png">
     <title>Desenvolvedor | Rafael do Nascimento</title>
 </head>
 
@@ -26,8 +25,8 @@
         <div class="logo">
             <span>R</span>
         </div>
-        <nav class="nav">
-            <ul class="menu" role="menu">
+        <nav class="nav" aria-label="Menu principal">
+            <ul id="menu" class="menu" role="menu">
                 <li><a href="#inicio" class="botton-effect btn-link">INICIO</a></li>
                 <li><a href="#curriculo" class="botton-effect btn-link">CURRÍCULO</a></li>
                 <li><a href="#tecnologias" class="botton-effect btn-link">TECNOLOGIAS</a></li>
@@ -44,22 +43,23 @@
         <section id="inicio">
             <div class="apresentation">
                 <img class="foto" src="assets/img/perfil.png" alt="foto de apresentação do desenvolvedor">
-                <h1 class="botton-effect"><span>Rafael Santos</span></h1>
+                <h1 class="botton-effect"><span>Rafael do Nascimento</span></h1>
                 <h2>Desenvolvedor Front-End</h2>
                 <div class="social">
-                    <div><a href="https://github.com/RafaDev01" target="_blank"><img src="assets/img/icon-github.svg"
-                                target="_blank" alt="github" title="github"></a></div>
-                    <div><img src="assets/img/icon-discord.svg" target="_blank" alt="discord"
+                    <div><a href="https://github.com/RafaDev01" target="_blank" rel="noopener noreferrer"><img src="assets/img/icon-github.svg"
+                                target="_blank" rel="noopener noreferrer" alt="github" role="img" aria-label="Acessar GitHub" title="github"></a></div>
+                    <div><img src="assets/img/icon-discord.svg" target="_blank" rel="noopener noreferrer" alt="discord" role="img" 
+                        aria-label="Copiar discord"
                             title="discord, clique para copiar"><span class="discord">Rafael#5166</span></div>
-                    <div><a href="mailto:rafael.nascimento.santos1@outlook.com" target="_blank"><img
-                                src="assets/img/icon-outlook.svg" alt="outlook" title="outlook"></a></div>
-                    <div><a href="https://www.linkedin.com/in/rafaelnascimento1999" target="_blank"><img
-                                src="assets/img/icon-linkedin.svg" alt="linkedin" title="linkedin"></a>
+                    <div><a href="mailto:rafael.nascimento.santos1@outlook.com" target="_blank" rel="noopener noreferrer"><img
+                                src="assets/img/icon-outlook.svg" alt="outlook" role="img" aria-label="Acessar email" title="outlook"></a></div>
+                    <div><a href="https://www.linkedin.com/in/rafaelnascimento1999" target="_blank" rel="noopener noreferrer"><img
+                                src="assets/img/icon-linkedin.svg" alt="linkedin" role="img" aria-label="Acessar linkedin" title="linkedin"></a>
                     </div>
                 </div>
                 <div class="box-models">
                     <h2>Precisa de um site? <span>Entre em contato!</span></h2>
-                    <a href="src/pages/modelos/index.html" class="btn-animado">
+                    <a href="src/pages/modelos/index.html" class="btn-animado" aria-label="Veja os modelos de sites disponíveis">
                         <span class="btn-text gradient-text">Ver modelos</span>
                     </a>
                 </div>
@@ -112,7 +112,7 @@
         </section>
         <div class="whatsapp-fixo">
             <a href="https://wa.me/+5511970652887?text=Olá,%20quero%20saber%20mais%20sobre%20seus%20serviços!"
-                target="_blank">
+                target="_blank" rel="noopener noreferrer">
                 <img src="assets/img/whatsapp-icon.svg" alt="whatsapp">
             </a>
         </div>
@@ -126,7 +126,7 @@
                 <div>
                     <span>Email:</span>
                     <a class="email-txt" href="mailto:rafael.nascimento.santos1@outlook.com"
-                        target="_blank">rafael.nascimento.santos1@outlook.com</a>
+                        target="_blank" rel="noopener noreferrer">rafael.nascimento.santos1@outlook.com</a>
                 </div>
             </div>
             <div class="copy">

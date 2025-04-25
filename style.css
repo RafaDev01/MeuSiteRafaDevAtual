@@ -437,6 +437,22 @@ h1 span:hover::after {
     }
 }
 
+@keyframes pulse {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .btn-animado {
+    animation: pulse 4s infinite;
+  }
+
 .languages-icons div {
     align-items: center;
     display: flex;
