@@ -17,11 +17,12 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicons/favicon-16x16.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="./src/projects/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Desenvolvedor | Rafael do Nascimento</title>
 </head>
 
 <body>
-    <header class="header">
+    <header class="header" data-aos="zoom-in" data-aos-delay="200">
         <div class="logo">
             <span>R</span>
         </div>
@@ -45,7 +46,7 @@
                 <img class="foto" src="assets/img/perfil.webp" alt="foto de apresentação do desenvolvedor">
                 <h1 class="botton-effect"><span>Rafael do Nascimento</span></h1>
                 <h2>Desenvolvedor Front-End</h2>
-                <div class="social">
+                <div class="social" data-aos="zoom-in">
                     <div><a href="https://github.com/RafaDev01" target="_blank" rel="noopener noreferrer"><img src="assets/img/icon-github.svg"
                                 target="_blank" rel="noopener noreferrer" alt="github" role="img" aria-label="Acessar GitHub" title="github"></a></div>
                     <div><img src="assets/img/icon-discord.svg" target="_blank" rel="noopener noreferrer" alt="discord" role="img" 
@@ -57,7 +58,7 @@
                                 src="assets/img/icon-linkedin.svg" alt="linkedin" role="img" aria-label="Acessar linkedin" title="linkedin"></a>
                     </div>
                 </div>
-                <div class="box-models">
+                <div class="box-models" data-aos="zoom-out-up" data-aos-delay="300">
                     <h2>Precisa de um site? <span>Entre em contato!</span></h2>
                     <a href="src/pages/modelos/index.html" class="btn-animado" aria-label="Veja os modelos de sites disponíveis">
                         <span class="btn-text gradient-text">Ver modelos</span>
@@ -65,7 +66,7 @@
                 </div>
                 <!--<p style="padding: 8px;">Total de visitas: <span id="visitas"></span></p>-->
             </div>
-            <div id="curriculo" class="apresentation-text">
+            <div id="curriculo" class="apresentation-text" data-aos="zoom-in" data-aos-delay="300">
                 <div class="apresentation-content">
                     <p class="apresentation-paragraph"></p>
                     <p>
@@ -134,6 +135,10 @@
             </div>
         </footer>
     </main>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script src="main.js"></script>
     <script src="./src/techs/mainTechs.js"></script>
     <script src="src/projects/projects.js"></script>
