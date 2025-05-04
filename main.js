@@ -11,11 +11,16 @@ const portfolio = document.querySelector(".portfolio")
 const btnShowMore = document.querySelector(".btn-show-more")
 const btnShowLess = document.querySelector(".btn-show-less")
 const works = document.querySelectorAll(".work")
+const emBreve = document.querySelector(".em-breve")
 
 let onSpan = false
 
 window.addEventListener("scroll", e => {
     scrollPage()
+})
+
+emBreve.addEventListener("click", () => {
+    alert("Em breve, ainda não disponível!")
 })
 
 
