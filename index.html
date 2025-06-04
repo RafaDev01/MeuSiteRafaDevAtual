@@ -1,147 +1,239 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Rafael do Nascimento">
-    <meta name="description"
-        content="Desenvolvedor Front End, formado em ADS pela Anhembi Morumbi e Técnico em Desenvolvimento de Sistemas pelo Centro Paula Souza.">
-    <meta name="googlebot" content="index, follow">
-    <meta name="keywords"
-        content="desenvolvedor front end, javascript, react, next.js, node.js, express,mysql, front-end, back-end, programação, web development">
-    <meta name="robots" content="index, follow">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="theme-color" content="#ffffff">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicons/favicon-16x16.png">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="./src/projects/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Rafael do Nascimento" />
+    <meta
+      name="description"
+      content="Desenvolvedor Front End, formado em ADS pela Anhembi Morumbi e Técnico em Desenvolvimento de Sistemas pelo Centro Paula Souza."
+    />
+    <meta name="googlebot" content="index, follow" />
+    <meta
+      name="keywords"
+      content="desenvolvedor front end, javascript, react, next.js, node.js, express,mysql, front-end, back-end, programação, web development"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/img/favicons/favicon-16x16.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./src/projects/style.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Desenvolvedor | Rafael do Nascimento</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header class="header" data-aos="zoom-in" data-aos-delay="200">
-        <div class="logo">
-            <span>R</span>
-        </div>
-        <nav class="nav" aria-label="Menu principal">
-            <ul id="menu" class="menu" role="menu">
-                <li><a href="#inicio" class="botton-effect btn-link">INICIO</a></li>
-                <li><a href="#curriculo" class="botton-effect btn-link">CURRÍCULO</a></li>
-                <li><a href="#tecnologias" class="botton-effect btn-link">TECNOLOGIAS</a></li>
-                <li><a href="#portfolio" class="botton-effect btn-link">PORTFÓLIO</a></li>
-                <li><a href="#contato" class="botton-effect btn-link">CONTATO</a></li>
-            </ul>
-            <button class="btn-mobile" aria-label="Abrir menu" aria-haspopup="true" aria-controls="menu"
-                aria-expanded="false">
-                <span class="hamburguer"></span>
-            </button>
-        </nav>
+      <div class="logo">
+        <span>R</span>
+      </div>
+      <nav class="nav" aria-label="Menu principal">
+        <ul id="menu" class="menu" role="menu">
+          <li><a href="#inicio" class="botton-effect btn-link">INICIO</a></li>
+          <li>
+            <a href="#curriculo" class="botton-effect btn-link">CURRÍCULO</a>
+          </li>
+          <li>
+            <a href="#tecnologias" class="botton-effect btn-link"
+              >TECNOLOGIAS</a
+            >
+          </li>
+          <li>
+            <a href="#portfolio" class="botton-effect btn-link">PORTFÓLIO</a>
+          </li>
+          <li><a href="#contato" class="botton-effect btn-link">CONTATO</a></li>
+        </ul>
+        <button
+          class="btn-mobile"
+          aria-label="Abrir menu"
+          aria-haspopup="true"
+          aria-controls="menu"
+          aria-expanded="false"
+        >
+          <span class="hamburguer"></span>
+        </button>
+      </nav>
     </header>
     <main class="main">
-        <section id="inicio">
-            <div class="apresentation">
-                <img class="foto" src="assets/img/perfil.webp" alt="foto de apresentação do desenvolvedor">
-                <h1 class="botton-effect"><span>Rafael do Nascimento</span></h1>
-                <h2>Desenvolvedor Front-End</h2>
-                <div class="social" data-aos="zoom-in">
-                    <div><a href="https://github.com/RafaDev01" target="_blank" rel="noopener noreferrer"><img src="assets/img/icon-github.svg"
-                                target="_blank" rel="noopener noreferrer" alt="github" role="img" aria-label="Acessar GitHub" title="github"></a></div>
-                    <div><img src="assets/img/icon-discord.svg" target="_blank" rel="noopener noreferrer" alt="discord" role="img" 
-                        aria-label="Copiar discord"
-                            title="discord, clique para copiar"><span class="discord">Rafael#5166</span></div>
-                    <div><a href="mailto:rafael.nascimento.santos1@outlook.com" target="_blank" rel="noopener noreferrer"><img
-                                src="assets/img/icon-outlook.svg" alt="outlook" role="img" aria-label="Acessar email" title="outlook"></a></div>
-                    <div><a href="https://www.linkedin.com/in/rafaelnascimento1999" target="_blank" rel="noopener noreferrer"><img
-                                src="assets/img/icon-linkedin.svg" alt="linkedin" role="img" aria-label="Acessar linkedin" title="linkedin"></a>
-                    </div>
-                </div>
-                <div class="box-models" data-aos="zoom-out-up" data-aos-delay="400">
-                    <h2>Precisa de um site? <span>Entre em contato!</span></h2>
-                    <a  href="#" class="btn-animado" aria-label="Veja os modelos de sites disponíveis">
-                        <span class="btn-text gradient-text em-breve">Ver modelos</span>
-                    </a>
-                </div>
-                <!--<p style="padding: 8px;">Total de visitas: <span id="visitas"></span></p>-->
+      <section id="inicio">
+        <div class="apresentation">
+          <img
+            class="foto"
+            src="assets/img/perfil.webp"
+            alt="foto de apresentação do desenvolvedor"
+          />
+          <h1 class="botton-effect"><span>Rafael do Nascimento</span></h1>
+          <h2>Desenvolvedor Front-End</h2>
+          <div class="social" data-aos="zoom-in">
+            <div>
+              <a
+                href="https://github.com/RafaDev01"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img
+                  src="assets/img/icon-github.svg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  alt="github"
+                  role="img"
+                  aria-label="Acessar GitHub"
+                  title="github"
+              /></a>
             </div>
-            <div id="curriculo" class="apresentation-text" data-aos="zoom-in" data-aos-delay="300">
-                <div class="apresentation-content">
-                    <p class="apresentation-paragraph"></p>
-                    <p>
-                        Sou desenvolvedor Front End com conhecimentos em backend, possuo formação superior em Análise e Desenvolvimento de Sistemas pela
-                        Universidade Anhembi Morumbi e formação técnica pelo Centro Paula Souza (ETEC). Minha stack
-                        principal é baseada em JavaScript e TypeScript, com forte especialização em Front-end utilizando React e
-                        Next.js. No backend, tenho experiência com Node.js, Express e bancos de dados MySQL.
-                    </p>
-
-                    <p class="experience-paragraph">
-                        Atualmente, atuo como Analista de Suporte em TI, realizando configuração de dispositivos,
-                        treinamento de usuários e manutenção de sistemas Android. Minha paixão por tecnologia e
-                        aprendizado contínuo me impulsiona a aprimorar minhas habilidades e a buscar desafios que me
-                        permitam criar soluções inovadoras.
-                    </p>
-                    <p>
-                        Para mais detalhes, consulte meu currículo abaixo.
-                    </p>
-                    <a href="assets/doc/rafael-curriculo.pdf" class="curriculo-link" download="curriculo">Baixar
-                        currículo</a>
-                </div>
+            <div>
+              <img
+                src="assets/img/icon-discord.svg"
+                target="_blank"
+                rel="noopener noreferrer"
+                alt="discord"
+                role="img"
+                aria-label="Copiar discord"
+                title="discord, clique para copiar"
+              /><span class="discord">Rafael#5166</span>
             </div>
-        </section>
-
-        <section>
-            <div id="tecnologias" class="language-container">
-                <div class="language--top">
-                    <div class="block">
-                        <h2>TECNOLOGIAS</h2>
-                    </div>
-                </div>
-                <div class="tech main-tech">
-                    <div class="card-container languages-icons" id="cardContainer-1"></div>
-                </div>
+            <div>
+              <a
+                href="mailto:rafael.nascimento.santos1@outlook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img
+                  src="assets/img/icon-outlook.svg"
+                  alt="outlook"
+                  role="img"
+                  aria-label="Acessar email"
+                  title="outlook"
+              /></a>
             </div>
-        </section>
-
-        <section id="portfolio" class="portfolio">
-            <div class="portfolio--top">
-                <div class="add--black"></div>
-                <h2>PORTFÓLIO</h2>
+            <div>
+              <a
+                href="https://www.linkedin.com/in/rafaelnascimento1999"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img
+                  src="assets/img/icon-linkedin.svg"
+                  alt="linkedin"
+                  role="img"
+                  aria-label="Acessar linkedin"
+                  title="linkedin"
+              /></a>
             </div>
-            <div id="projectCardContainer"></div>
-        </section>
-        <div class="whatsapp-fixo">
-            <a href="https://wa.me/+5511970652887?text=Olá,%20quero%20saber%20mais%20sobre%20seus%20serviços!"
-                target="_blank" rel="noopener noreferrer">
-                <img src="assets/img/whatsapp-icon.svg" alt="whatsapp">
+          </div>
+          <div class="box-models" data-aos="zoom-out-up" data-aos-delay="400">
+            <h2>Precisa de um site? <span>Entre em contato!</span></h2>
+            <a
+              href="https://modelos.rafaeldev01.com.br/"
+              class="btn-animado"
+              aria-label="Veja os modelos de sites disponíveis"
+            >
+              <span class="btn-text gradient-text em-breve">Ver modelos</span>
             </a>
+          </div>
+          <!--<p style="padding: 8px;">Total de visitas: <span id="visitas"></span></p>-->
         </div>
+        <div
+          id="curriculo"
+          class="apresentation-text"
+          data-aos="zoom-in"
+          data-aos-delay="300"
+        >
+          <div class="apresentation-content">
+            <p class="apresentation-paragraph"></p>
+            <p>
+              Sou desenvolvedor Front End com conhecimentos em backend, possuo
+              formação superior em Análise e Desenvolvimento de Sistemas pela
+              Universidade Anhembi Morumbi e formação técnica pelo Centro Paula
+              Souza (ETEC). Minha stack principal é baseada em JavaScript e
+              TypeScript, com forte especialização em Front-end utilizando React
+              e Next.js. No backend, tenho experiência com Node.js, Express e
+              bancos de dados MySQL.
+            </p>
 
-        <footer id="contato" class="footer">
-            <div class="contact">
-                <h3>Contato</h3>
-                <div>
-                    <span>Discord: Rafael#5166</span>
-                </div>
-                <div>
-                    <span>Email:</span>
-                    <a class="email-txt" href="mailto:rafael.nascimento.santos1@outlook.com"
-                        target="_blank" rel="noopener noreferrer">rafael.nascimento.santos1@outlook.com</a>
-                </div>
+            <p class="experience-paragraph">
+              Atualmente, atuo como Analista de Suporte em TI, realizando
+              configuração de dispositivos, treinamento de usuários e manutenção
+              de sistemas Android. Minha paixão por tecnologia e aprendizado
+              contínuo me impulsiona a aprimorar minhas habilidades e a buscar
+              desafios que me permitam criar soluções inovadoras.
+            </p>
+            <p>Para mais detalhes, consulte meu currículo abaixo.</p>
+            <a
+              href="assets/doc/rafael-curriculo.pdf"
+              class="curriculo-link"
+              download="curriculo"
+              >Baixar currículo</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div id="tecnologias" class="language-container">
+          <div class="language--top">
+            <div class="block">
+              <h2>TECNOLOGIAS</h2>
             </div>
-            <div class="copy">
-                <p>© 2025 Rafael do Nascimento Santos</p>
-            </div>
-        </footer>
+          </div>
+          <div class="tech main-tech">
+            <div
+              class="card-container languages-icons"
+              id="cardContainer-1"
+            ></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="portfolio" class="portfolio">
+        <div class="portfolio--top">
+          <div class="add--black"></div>
+          <h2>PORTFÓLIO</h2>
+        </div>
+        <div id="projectCardContainer"></div>
+      </section>
+      <div class="whatsapp-fixo">
+        <a
+          href="https://wa.me/+5511970652887?text=Olá,%20quero%20saber%20mais%20sobre%20seus%20serviços!"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="assets/img/whatsapp-icon.svg" alt="whatsapp" />
+        </a>
+      </div>
+
+      <footer id="contato" class="footer">
+        <div class="contact">
+          <h3>Contato</h3>
+          <div>
+            <span>Discord: Rafael#5166</span>
+          </div>
+          <div>
+            <span>Email:</span>
+            <a
+              class="email-txt"
+              href="mailto:rafael.nascimento.santos1@outlook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              >rafael.nascimento.santos1@outlook.com</a
+            >
+          </div>
+        </div>
+        <div class="copy">
+          <p>© 2025 Rafael do Nascimento Santos</p>
+        </div>
+      </footer>
     </main>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        AOS.init();
+      AOS.init();
     </script>
     <script src="main.js"></script>
     <script src="./src/techs/mainTechs.js"></script>
     <script src="src/projects/projects.js"></script>
-</body>
-
+  </body>
 </html>

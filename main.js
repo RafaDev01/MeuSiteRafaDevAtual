@@ -1,134 +1,131 @@
-const body = document.querySelector("body")
-const header = document.querySelector(".header")
-const menuLink = [...document.querySelectorAll('.btn-link[href^="#"]')]
-const apresentation = document.querySelector(".apresentation")
-const btnMobile = document.querySelector(".btn-mobile")
-const nav = document.querySelector(".nav")
-const apresentationParagraph = document.querySelector(".apresentation-paragraph")
-const discord = document.querySelector(".discord").parentElement
-const portfolioWorks = [...document.querySelectorAll(".portfolio--works")]
-const portfolio = document.querySelector(".portfolio")
-const btnShowMore = document.querySelector(".btn-show-more")
-const btnShowLess = document.querySelector(".btn-show-less")
-const works = document.querySelectorAll(".work")
-const emBreve = document.querySelector(".em-breve")
+const body = document.querySelector("body");
+const header = document.querySelector(".header");
+const menuLink = [...document.querySelectorAll('.btn-link[href^="#"]')];
+const apresentation = document.querySelector(".apresentation");
+const btnMobile = document.querySelector(".btn-mobile");
+const nav = document.querySelector(".nav");
+const apresentationParagraph = document.querySelector(
+  ".apresentation-paragraph"
+);
+const discord = document.querySelector(".discord").parentElement;
+const portfolioWorks = [...document.querySelectorAll(".portfolio--works")];
+const portfolio = document.querySelector(".portfolio");
+const btnShowMore = document.querySelector(".btn-show-more");
+const btnShowLess = document.querySelector(".btn-show-less");
+const works = document.querySelectorAll(".work");
 
-let onSpan = false
+let onSpan = false;
 
-window.addEventListener("scroll", e => {
-    scrollPage()
-})
-
-emBreve.addEventListener("click", () => {
-    alert("Em breve, ainda não disponível!")
-})
-
+window.addEventListener("scroll", (e) => {
+  scrollPage();
+});
 
 function toggleMenu(event) {
-    if (event.type === "touchstart") event.preventDefault()
+  if (event.type === "touchstart") event.preventDefault();
 
-    nav.classList.toggle("active")
-    body.classList.toggle("active")
-    let active = nav.classList.contains("active")
+  nav.classList.toggle("active");
+  body.classList.toggle("active");
+  let active = nav.classList.contains("active");
 
-    if (active) {
-        header.classList.add("active")
-        event.currentTarget.setAttribute("aria-expended", "true")
-        event.currentTarget.setAttribute("aria-label", "Fechar menu")
-    }
-    if (!active) {
-        event.currentTarget.setAttribute("aria-expended", "false")
-        event.currentTarget.setAttribute("aria-label", "Abrir menu")
-        setTimeout(() => {
-            header.classList.remove("active")
-        }, 800)
-    }
+  if (active) {
+    header.classList.add("active");
+    event.currentTarget.setAttribute("aria-expended", "true");
+    event.currentTarget.setAttribute("aria-label", "Fechar menu");
+  }
+  if (!active) {
+    event.currentTarget.setAttribute("aria-expended", "false");
+    event.currentTarget.setAttribute("aria-label", "Abrir menu");
+    setTimeout(() => {
+      header.classList.remove("active");
+    }, 800);
+  }
 }
 
 function toggleFlip(card) {
-    card.classList.toggle("flipped");
+  card.classList.toggle("flipped");
 }
 
-
-btnMobile.addEventListener("click", toggleMenu)
+btnMobile.addEventListener("click", toggleMenu);
 btnMobile.addEventListener("touchstart", toggleMenu);
 
-menuLink.forEach(elemento => {
-    elemento.addEventListener("click", (event) => {
-        event.preventDefault();
+menuLink.forEach((elemento) => {
+  elemento.addEventListener("click", (event) => {
+    event.preventDefault();
 
-        nav.classList.toggle("active")
-        body.classList.toggle("active")
+    nav.classList.toggle("active");
+    body.classList.toggle("active");
 
-        const destino = document.querySelector(elemento.getAttribute("href"));
+    const destino = document.querySelector(elemento.getAttribute("href"));
 
-        if (destino) {
-            setTimeout(() => {
-                destino.scrollIntoView({ behavior: "smooth" });
-            }, 800);
-        }
-    });
+    if (destino) {
+      setTimeout(() => {
+        destino.scrollIntoView({ behavior: "smooth" });
+      }, 800);
+    }
+  });
 });
 
 async function copiarTexto() {
-    try {
-        await navigator.clipboard.writeText(discord.lastChild.textContent);
-    } catch (error) { "erro" }
+  try {
+    await navigator.clipboard.writeText(discord.lastChild.textContent);
+  } catch (error) {
+    ("erro");
+  }
 }
 
 discord.addEventListener("click", () => {
-    copiarTexto()
-    showDiscordText()
-})
+  copiarTexto();
+  showDiscordText();
+});
 
 showDiscordText = () => {
-    let discordText = document.querySelector(".discord--text")
-    discordText.classList.add("active")
-    setTimeout(() => {
-        discordText.classList.remove("active")
-    }, 8000)
-}
+  let discordText = document.querySelector(".discord--text");
+  discordText.classList.add("active");
+  setTimeout(() => {
+    discordText.classList.remove("active");
+  }, 8000);
+};
 
 const spanApresentation = () => {
-    let span = document.createElement("span")
-    span.classList.add("name-apresentation")
-    span.innerHTML = `Olá eu sou o Rafael =&#41;`
-    apresentationParagraph.insertAdjacentElement('afterbegin', span)
-}
+  let span = document.createElement("span");
+  span.classList.add("name-apresentation");
+  span.innerHTML = `Olá eu sou o Rafael =&#41;`;
+  apresentationParagraph.insertAdjacentElement("afterbegin", span);
+};
 
 const scrollPage = () => {
-    if (window.pageYOffset > 80) header.classList.add("wrap-header")
-    if (window.pageYOffset < 80) header.classList.remove("wrap-header")
-    if (!onSpan) {
-        if (window.pageYOffset > apresentation.getBoundingClientRect().bottom / 4) {
-            spanApresentation()
-            onSpan = true
-        }
+  if (window.pageYOffset > 80) header.classList.add("wrap-header");
+  if (window.pageYOffset < 80) header.classList.remove("wrap-header");
+  if (!onSpan) {
+    if (window.pageYOffset > apresentation.getBoundingClientRect().bottom / 4) {
+      spanApresentation();
+      onSpan = true;
     }
-}
+  }
+};
 
 const creatHoverWork = () => {
-    let hoverWorkDiv = document.createElement("div")
+  let hoverWorkDiv = document.createElement("div");
 
-    let hoverWorkP = document.createElement("p")
-    hoverWorkP.innerHTML = `Conteúdo</br>indisponível`
-    hoverWorkDiv.appendChild(hoverWorkP)
-    return hoverWorkDiv
-}
+  let hoverWorkP = document.createElement("p");
+  hoverWorkP.innerHTML = `Conteúdo</br>indisponível`;
+  hoverWorkDiv.appendChild(hoverWorkP);
+  return hoverWorkDiv;
+};
 
 function mouseHoverWork(elemento) {
-    const eventAdd = () => {
-        if (elemento.classList.contains("active")) {
-            let newElement = elemento.appendChild(creatHoverWork())
-            newElement.classList.add("hover-white")
-            elemento.addEventListener("mouseleave", () => {
-                setInterval(() => {
-                    newElement.remove()
-                }, 500)
-            });
-        }
-    };
-    elemento.addEventListener("mouseenter", eventAdd);
+  const eventAdd = () => {
+    if (elemento.classList.contains("active")) {
+      let newElement = elemento.appendChild(creatHoverWork());
+      newElement.classList.add("hover-white");
+      elemento.addEventListener("mouseleave", () => {
+        setInterval(() => {
+          newElement.remove();
+        }, 500);
+      });
+    }
+  };
+  elemento.addEventListener("mouseenter", eventAdd);
 }
 
 /*
@@ -166,9 +163,9 @@ btnShowLess.addEventListener("click", () => {
 */
 
 const addHoverWork = () => {
-    works.forEach(elemento => {
-        mouseHoverWork(elemento)
-    })
-}
+  works.forEach((elemento) => {
+    mouseHoverWork(elemento);
+  });
+};
 
-addHoverWork()
+addHoverWork();
