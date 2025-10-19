@@ -172,4 +172,4 @@ addHoverWork();
 
 /* ALERT DO BOTAO DE MODELOS */
 let btnModelos = document.querySelector(".btn-animado");
-btnModelos.addEventListener("click", () => alert("Pagina em construção =)"));
+btnModelos.addEventListener("click", () => alert("Página em construção =)"));
