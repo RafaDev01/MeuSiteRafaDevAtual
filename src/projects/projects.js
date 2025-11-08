@@ -17,8 +17,16 @@ const projects = [
       "Projeto desenvolvido como Trabalho de Conclusão de Curso (TCC) na ETEC. O 'Na Faixa' é um aplicativo criado para motoristas de aplicativos monitorarem seus gastos com o veículo. A plataforma permite o registro de despesas, previsão de custos futuros e emissão de alertas para controle financeiro. Desenvolvi toda a lógica do sistema, incluindo backend, banco de dados, diagramas e frontend web.",
   },
   {
+    name: "Crypto Currency",
+    technologies: ["ts", "React"],
+    link: "https://github.com/RafaDev01/crypto",
+    img: "crypto.webp",
+    details:
+      "Projeto que consome uma API de criptomoedas, processa os dados e apresenta as cotações de forma dinâmica e organizada.",
+  },
+  {
     name: "Petshop Senac",
-    technologies: ["React"],
+    technologies: ["JavaScript", "React"],
     link: "https://petshop-senac.vercel.app",
     img: "petshop.webp",
     details:
