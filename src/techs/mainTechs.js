@@ -2,7 +2,7 @@ const primaryLanguages = [
   { name: "HTML", img: "assets/img/html.svg" },
   { name: "CSS", img: "assets/img/css.svg" },
   { name: "Javascript", img: "assets/img/javascript.svg" },
-  { name: "TypeScript", img: "assets/img/ts.png" },
+  { name: "TypeScript", img: "assets/img/ts.webp" },
   { name: "React", img: "assets/img/react.svg" },
   { name: "NextJS", img: "assets/img/nextjs.svg" },
   { name: "Styled Components", img: "assets/img/styled-components.svg" },
