@@ -1,4 +1,6 @@
 {
   "version": 2,
-  "framework": null
+  "framework": null,
+  "builds": [],
+  "routes": [{ "src": "/(.*)", "dest": "/index.html" }]
 }
