@@ -1,5 +1,13 @@
 const projects = [
   {
+    name: "PDV Legal",
+    technologies: ["ts", "React", "tailwind"],
+    link: "https://sistema.pdvlegal.com.br/",
+    img: "pdvlegal.png",
+    details:
+      "Projeto que consome uma API de criptomoedas, processa os dados e apresenta as cotações de forma dinâmica e organizada.",
+  },
+  {
     name: "Na Faixa",
     technologies: [
       "React-Native",
