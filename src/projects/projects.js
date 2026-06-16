@@ -5,7 +5,7 @@ const projects = [
     link: "https://sistema.pdvlegal.com.br/",
     img: "pdvlegal.png",
     details:
-      "Projeto que consome uma API de criptomoedas, processa os dados e apresenta as cotações de forma dinâmica e organizada.",
+      "Plataforma web de PDV (Ponto de Venda) para gestão comercial, desenvolvida com TypeScript, React e Tailwind CSS, com interface moderna e responsiva.",
   },
   {
     name: "Na Faixa",
@@ -182,7 +182,7 @@ function renderProjectCards() {
                 <h3 class="title-project">${project.name}</h3>
                 <div class="project-card" id="card-${project.name}">
                     <div class="image-container">
-                        <img class="img-project" src="./assets/img/projects/${project.img}" alt="${project.name}" />
+                        <img class="img-project" src="./assets/img/projects/${project.img}" alt="${project.name}" loading="lazy" />
                         <div>
                             <div class="overlay-tech hidden" id="tech-${project.name}">
                                 ${iconsHTML}
@@ -201,8 +201,7 @@ function renderProjectCards() {
             </div>
         `;
 
-    // Adiciona o card ao container
-    cardContainer.innerHTML += cardHTML;
+    cardContainer.insertAdjacentHTML("beforeend", cardHTML);
   });
 }
 

@@ -4,19 +4,12 @@ const menuLink = [...document.querySelectorAll('.btn-link[href^="#"]')];
 const apresentation = document.querySelector(".apresentation");
 const btnMobile = document.querySelector(".btn-mobile");
 const nav = document.querySelector(".nav");
-const apresentationParagraph = document.querySelector(
-  ".apresentation-paragraph"
-);
-const discord = document.querySelector(".discord").parentElement;
-const portfolioWorks = [...document.querySelectorAll(".portfolio--works")];
-const portfolio = document.querySelector(".portfolio");
-const btnShowMore = document.querySelector(".btn-show-more");
-const btnShowLess = document.querySelector(".btn-show-less");
-const works = document.querySelectorAll(".work");
+const apresentationParagraph = document.querySelector(".apresentation-paragraph");
+const discordBtn = document.querySelector(".social-discord");
 
 let onSpan = false;
 
-window.addEventListener("scroll", (e) => {
+window.addEventListener("scroll", () => {
   scrollPage();
 });
 
@@ -25,16 +18,14 @@ function toggleMenu(event) {
 
   nav.classList.toggle("active");
   body.classList.toggle("active");
-  let active = nav.classList.contains("active");
+  const active = nav.classList.contains("active");
+
+  event.currentTarget.setAttribute("aria-expanded", active ? "true" : "false");
+  event.currentTarget.setAttribute("aria-label", active ? "Fechar menu" : "Abrir menu");
 
   if (active) {
     header.classList.add("active");
-    event.currentTarget.setAttribute("aria-expended", "true");
-    event.currentTarget.setAttribute("aria-label", "Fechar menu");
-  }
-  if (!active) {
-    event.currentTarget.setAttribute("aria-expended", "false");
-    event.currentTarget.setAttribute("aria-label", "Abrir menu");
+  } else {
     setTimeout(() => {
       header.classList.remove("active");
     }, 800);
@@ -52,42 +43,48 @@ menuLink.forEach((elemento) => {
   elemento.addEventListener("click", (event) => {
     event.preventDefault();
 
-    nav.classList.toggle("active");
-    body.classList.toggle("active");
+    nav.classList.remove("active");
+    body.classList.remove("active");
+    btnMobile.setAttribute("aria-expanded", "false");
+    btnMobile.setAttribute("aria-label", "Abrir menu");
+    setTimeout(() => {
+      header.classList.remove("active");
+    }, 800);
 
     const destino = document.querySelector(elemento.getAttribute("href"));
-
     if (destino) {
       setTimeout(() => {
         destino.scrollIntoView({ behavior: "smooth" });
-      }, 800);
+      }, 200);
     }
   });
 });
 
-async function copiarTexto() {
+async function copiarDiscord() {
   try {
-    await navigator.clipboard.writeText(discord.lastChild.textContent);
+    const texto = discordBtn.querySelector(".discord").textContent;
+    await navigator.clipboard.writeText(texto);
+    showDiscordText();
   } catch (error) {
-    ("erro");
+    console.error("Erro ao copiar Discord:", error);
   }
 }
 
-discord.addEventListener("click", () => {
-  copiarTexto();
-  showDiscordText();
-});
-
-showDiscordText = () => {
-  let discordText = document.querySelector(".discord--text");
+const showDiscordText = () => {
+  const discordText = document.querySelector(".discord--text");
+  if (!discordText) return;
   discordText.classList.add("active");
   setTimeout(() => {
     discordText.classList.remove("active");
-  }, 8000);
+  }, 3000);
 };
 
+if (discordBtn) {
+  discordBtn.addEventListener("click", copiarDiscord);
+}
+
 const spanApresentation = () => {
-  let span = document.createElement("span");
+  const span = document.createElement("span");
   span.classList.add("name-apresentation");
   span.innerHTML = `Olá eu sou o Rafael =&#41;`;
   apresentationParagraph.insertAdjacentElement("afterbegin", span);
@@ -103,73 +100,3 @@ const scrollPage = () => {
     }
   }
 };
-
-const creatHoverWork = () => {
-  let hoverWorkDiv = document.createElement("div");
-
-  let hoverWorkP = document.createElement("p");
-  hoverWorkP.innerHTML = `Conteúdo</br>indisponível`;
-  hoverWorkDiv.appendChild(hoverWorkP);
-  return hoverWorkDiv;
-};
-
-function mouseHoverWork(elemento) {
-  const eventAdd = () => {
-    if (elemento.classList.contains("active")) {
-      let newElement = elemento.appendChild(creatHoverWork());
-      newElement.classList.add("hover-white");
-      elemento.addEventListener("mouseleave", () => {
-        setInterval(() => {
-          newElement.remove();
-        }, 500);
-      });
-    }
-  };
-  elemento.addEventListener("mouseenter", eventAdd);
-}
-
-/*
-btnShowMore.addEventListener("click", () => {
-    btnShowMore.classList.add("btn-down")
-    setTimeout(() => {
-        portfolio.classList.toggle("active")
-        works.forEach((elemento, index) => {
-            elemento.classList.add("active")
-            if (index > 2) {
-                elemento.classList.toggle("off")
-            }
-            btnShowMore.classList.remove("btn-down")
-        })
-    }, 500)
-})
-*/
-
-/*
-btnShowLess.addEventListener("click", () => {
-    btnShowLess.classList.add("btn-up")
-    setTimeout(() => {
-        portfolio.classList.toggle("active")
-        works.forEach((elemento, index) => {
-            if (index > 2) {
-                elemento.classList.remove("active")
-                if (index > 2) {
-                    elemento.classList.toggle("off")
-                }
-            }
-            btnShowLess.classList.remove("btn-up")
-        })
-    }, 500)
-})
-*/
-
-const addHoverWork = () => {
-  works.forEach((elemento) => {
-    mouseHoverWork(elemento);
-  });
-};
-
-addHoverWork();
-
-/* ALERT DO BOTAO DE MODELOS */
-let btnModelos = document.querySelector(".btn-animado");
-btnModelos.addEventListener("click", () => alert("Página em construção =)"));
