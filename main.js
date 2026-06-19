@@ -5,8 +5,6 @@ const apresentation = document.querySelector(".apresentation");
 const btnMobile = document.querySelector(".btn-mobile");
 const nav = document.querySelector(".nav");
 const apresentationParagraph = document.querySelector(".apresentation-paragraph");
-const discordBtn = document.querySelector(".social-discord");
-
 let onSpan = false;
 
 window.addEventListener("scroll", () => {
@@ -59,29 +57,6 @@ menuLink.forEach((elemento) => {
     }
   });
 });
-
-async function copiarDiscord() {
-  try {
-    const texto = discordBtn.querySelector(".discord").textContent;
-    await navigator.clipboard.writeText(texto);
-    showDiscordText();
-  } catch (error) {
-    console.error("Erro ao copiar Discord:", error);
-  }
-}
-
-const showDiscordText = () => {
-  const discordText = document.querySelector(".discord--text");
-  if (!discordText) return;
-  discordText.classList.add("active");
-  setTimeout(() => {
-    discordText.classList.remove("active");
-  }, 3000);
-};
-
-if (discordBtn) {
-  discordBtn.addEventListener("click", copiarDiscord);
-}
 
 const spanApresentation = () => {
   const span = document.createElement("span");

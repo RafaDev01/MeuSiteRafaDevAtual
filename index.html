@@ -13,7 +13,7 @@
       name="keywords"
       content="desenvolvedor front end, javascript, react, next.js, node.js, express, mysql, typescript, web development, portfólio"
     />
-    <meta name="theme-color" content="#141414" />
+    <meta name="theme-color" content="#0d0d0d" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
@@ -32,7 +32,6 @@
       content="Desenvolvedor Front-End especializado em React, Next.js e TypeScript."
     />
 
-    <!-- Preconnect para performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
@@ -51,22 +50,16 @@
   </head>
 
   <body>
-    <header class="header" data-aos="zoom-in" data-aos-delay="200">
+    <header class="header">
       <div class="logo">
         <span>R</span>
       </div>
       <nav class="nav" aria-label="Menu principal">
         <ul id="menu" class="menu" role="menu">
           <li><a href="#inicio" class="botton-effect btn-link">INICIO</a></li>
-          <li>
-            <a href="#curriculo" class="botton-effect btn-link">CURRÍCULO</a>
-          </li>
-          <li>
-            <a href="#tecnologias" class="botton-effect btn-link">TECNOLOGIAS</a>
-          </li>
-          <li>
-            <a href="#portfolio" class="botton-effect btn-link">PORTFÓLIO</a>
-          </li>
+          <li><a href="#curriculo" class="botton-effect btn-link">CURRÍCULO</a></li>
+          <li><a href="#tecnologias" class="botton-effect btn-link">TECNOLOGIAS</a></li>
+          <li><a href="#portfolio" class="botton-effect btn-link">PORTFÓLIO</a></li>
           <li><a href="#contato" class="botton-effect btn-link">CONTATO</a></li>
         </ul>
         <button
@@ -82,72 +75,87 @@
     </header>
 
     <main class="main">
+      <!-- HERO -->
       <section id="inicio">
         <div class="apresentation">
-          <img
-            class="foto"
-            src="assets/img/perfil.webp"
-            alt="Foto de Rafael do Nascimento, Desenvolvedor Front-End"
-            width="200"
-            height="200"
-          />
-          <h1 class="botton-effect"><span>Rafael do Nascimento</span></h1>
-          <h2>Desenvolvedor Front-End</h2>
-          <div class="social" data-aos="zoom-in">
-            <a
-              href="https://github.com/RafaDev01"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Acessar GitHub de Rafael do Nascimento"
-              title="GitHub"
-            >
-              <img src="assets/img/icon-github.svg" alt="GitHub" />
-            </a>
-            <button
-              class="social-discord"
-              aria-label="Copiar Discord: Rafael#5166"
-              title="Discord — clique para copiar"
-            >
-              <img src="assets/img/icon-discord.svg" alt="Discord" />
-              <span class="discord">Rafael#5166</span>
-            </button>
-            <a
-              href="mailto:rafael.nascimento.santos1@outlook.com"
-              aria-label="Enviar e-mail para Rafael do Nascimento"
-              title="E-mail"
-            >
-              <img src="assets/img/icon-outlook.svg" alt="E-mail" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/rafaelnascimento1999"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Acessar LinkedIn de Rafael do Nascimento"
-              title="LinkedIn"
-            >
-              <img src="assets/img/icon-linkedin.svg" alt="LinkedIn" />
-            </a>
-          </div>
-          <span class="discord--text" aria-live="polite">Discord copiado!</span>
-          <div class="box-models" data-aos="zoom-out-up" data-aos-delay="400">
-            <h2>Precisa de um site? <span>Entre em contato!</span></h2>
-            <a
-              href="#contato"
-              class="btn-animado"
-              aria-label="Entrar em contato com Rafael do Nascimento"
-            >
-              <span class="btn-text">Falar agora</span>
-            </a>
+          <div class="hero-grid">
+
+            <div class="hero-text" data-aos="fade-right" data-aos-duration="700">
+              <span class="hero-eyebrow">Olá, eu sou</span>
+              <h1 class="hero-name">
+                <span>Rafael do<br>Nascimento</span>
+              </h1>
+              <p class="hero-role">Desenvolvedor Front-End</p>
+              <p class="hero-description">
+                Criando interfaces modernas com React, Next.js e TypeScript,
+                com foco em performance, UX e código limpo.
+              </p>
+              <div class="social">
+                <a
+                  href="https://github.com/RafaDev01"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Acessar GitHub de Rafael do Nascimento"
+                  title="GitHub"
+                >
+                  <img src="assets/img/icon-github.svg" alt="GitHub" />
+                </a>
+                <a
+                  href="https://wa.me/+5511970652887"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Entrar em contato pelo WhatsApp"
+                  title="WhatsApp"
+                >
+                  <img src="assets/img/whatsapp-icon.svg" alt="WhatsApp" />
+                </a>
+                <a
+                  href="mailto:rafael.nascimento.santos1@outlook.com"
+                  aria-label="Enviar e-mail para Rafael do Nascimento"
+                  title="E-mail"
+                >
+                  <img src="assets/img/icon-outlook.svg" alt="E-mail" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/rafaelnascimento1999"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Acessar LinkedIn de Rafael do Nascimento"
+                  title="LinkedIn"
+                >
+                  <img src="assets/img/icon-linkedin.svg" alt="LinkedIn" />
+                </a>
+              </div>
+<div class="hero-cta">
+                <a href="#portfolio" class="btn-primary">Ver projetos</a>
+                <a href="#contato" class="btn-outline">Falar comigo</a>
+              </div>
+            </div>
+
+            <div class="hero-image" data-aos="fade-left" data-aos-duration="700" data-aos-delay="150">
+              <div class="hero-photo-ring">
+                <img
+                  src="assets/img/perfil.webp"
+                  alt="Rafael do Nascimento, Desenvolvedor Front-End"
+                  width="300"
+                  height="300"
+                />
+              </div>
+            </div>
+
           </div>
         </div>
+      </section>
 
+      <!-- SOBRE / CURRÍCULO -->
+      <section>
         <div
           id="curriculo"
-          class="apresentation-text"
-          data-aos="zoom-in"
-          data-aos-delay="300"
+          class="about-section"
+          data-aos="fade-up"
+          data-aos-duration="600"
         >
-          <div class="apresentation-content">
+          <div class="about-content">
             <p class="apresentation-paragraph"></p>
             <p>
               Sou desenvolvedor Front-End com conhecimentos em backend, formado
@@ -176,23 +184,22 @@
         </div>
       </section>
 
+      <!-- TECNOLOGIAS -->
       <section aria-label="Tecnologias">
         <div id="tecnologias" class="language-container">
-          <div class="language--top">
-            <h2>TECNOLOGIAS</h2>
+          <div class="section-title" data-aos="fade-up">
+            <h2>Tecnologias</h2>
           </div>
-          <div class="tech main-tech">
-            <div
-              class="card-container languages-icons"
-              id="cardContainer-1"
-            ></div>
+          <div class="tech-grid-wrapper">
+            <div class="card-container languages-icons" id="cardContainer-1"></div>
           </div>
         </div>
       </section>
 
+      <!-- PORTFÓLIO -->
       <section id="portfolio" class="portfolio">
-        <div class="portfolio--top">
-          <h2>PORTFÓLIO</h2>
+        <div class="section-title section-title--dark" data-aos="fade-up">
+          <h2>Portfólio</h2>
         </div>
         <div id="projectCardContainer"></div>
       </section>
@@ -210,15 +217,37 @@
     </main>
 
     <footer id="contato" class="footer">
-      <div class="contact">
-        <h3>Contato</h3>
-        <span>Discord: Rafael#5166</span>
-        <div>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-logo">R</div>
+          <p>Rafael do Nascimento</p>
+          <span>Desenvolvedor Front-End</span>
+        </div>
+        <div class="footer-contact">
+          <h3>Contato</h3>
           <a
             class="email-txt"
             href="mailto:rafael.nascimento.santos1@outlook.com"
             >rafael.nascimento.santos1@outlook.com</a
           >
+          <a
+            class="email-txt"
+            href="https://wa.me/+5511970652887"
+            target="_blank"
+            rel="noopener noreferrer"
+            >WhatsApp: (11) 97065-2887</a
+          >
+          <div class="footer-social">
+            <a href="https://github.com/RafaDev01" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <img src="assets/img/icon-github.svg" alt="GitHub" />
+            </a>
+            <a href="https://www.linkedin.com/in/rafaelnascimento1999" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <img src="assets/img/icon-linkedin.svg" alt="LinkedIn" />
+            </a>
+            <a href="mailto:rafael.nascimento.santos1@outlook.com" aria-label="E-mail">
+              <img src="assets/img/icon-outlook.svg" alt="E-mail" />
+            </a>
+          </div>
         </div>
       </div>
       <div class="copy">
@@ -228,7 +257,7 @@
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      AOS.init();
+      AOS.init({ once: true });
     </script>
     <script src="main.js"></script>
     <script src="./src/techs/mainTechs.js"></script>

@@ -16,13 +16,11 @@ const projects = [
       "Node",
       "Express",
       "MySQL",
-      "Postman",
-      "Git",
     ],
     link: "https://www.youtube.com/watch?v=eTCbDVuNkWc",
     img: "na-faixa.webp",
     details:
-      "Projeto desenvolvido como Trabalho de Conclusão de Curso (TCC) na ETEC. O 'Na Faixa' é um aplicativo criado para motoristas de aplicativos monitorarem seus gastos com o veículo. A plataforma permite o registro de despesas, previsão de custos futuros e emissão de alertas para controle financeiro. Desenvolvi toda a lógica do sistema, incluindo backend, banco de dados, diagramas e frontend web.",
+      "Projeto desenvolvido como TCC na ETEC. Aplicativo para motoristas de aplicativos monitorarem gastos com o veículo. Inclui registro de despesas, previsão de custos e alertas de controle financeiro. Desenvolvi toda a lógica do sistema: backend, banco de dados, diagramas e frontend web.",
   },
   {
     name: "Crypto Currency",
@@ -42,11 +40,11 @@ const projects = [
   },
   {
     name: "PokeNext",
-    technologies: ["ts", "Nextjs", "React", "Tailwind", "Git"],
+    technologies: ["ts", "Nextjs", "React", "Tailwind"],
     link: "https://pokemon-nextjs-1s2qg143a-rafadev01s-projects.vercel.app/",
     img: "pokenext.webp",
     details:
-      "Projeto desenvolvido para aprimorar habilidades, o projeto consome a API do pokemon e possui design responsivo utilizando tailwind.",
+      "Projeto desenvolvido para aprimorar habilidades, consome a API do Pokémon e possui design responsivo utilizando Tailwind.",
   },
   {
     name: "Perfil",
@@ -57,7 +55,7 @@ const projects = [
       "Aplicativo desenvolvido em React Native simulando uma página de perfil, com foco em explorar componentes e funcionalidades nativas da plataforma.",
   },
   {
-    name: "To-do-list full stack",
+    name: "To-do-list Full Stack",
     technologies: [
       "HTML",
       "CSS",
@@ -70,7 +68,7 @@ const projects = [
     link: "https://github.com/RafaDev01/lista-de-tarefas-full-stack",
     img: "todolist.webp",
     details:
-      "Uma aplicação full stack de lista de tarefas com frontend responsivo em Bootstrap, backend em Node.js e banco de dados MySQL para gerenciamento de tarefas.",
+      "Aplicação full stack de lista de tarefas com frontend responsivo em Bootstrap, backend em Node.js e banco de dados MySQL.",
   },
   {
     name: "Golf Burguer",
@@ -78,7 +76,7 @@ const projects = [
     link: "https://golf-burguer.vercel.app/",
     img: "golf-burguer.webp",
     details:
-      "Landing page desenvolvida com foco em responsividade e design atraente para promover uma ação social.",
+      "Landing page com foco em responsividade e design atraente para promover uma ação social.",
   },
   {
     name: "4Fun Café",
@@ -86,7 +84,7 @@ const projects = [
     link: "https://4funcafe.vercel.app/",
     img: "4funcafe.webp",
     details:
-      "Site responsivo para um catálogo de canecas personalizadas, utilizando JavaScript para implementar funcionalidades dinâmicas, como navegação interativa.",
+      "Site responsivo para catálogo de canecas personalizadas, com JavaScript para navegação interativa.",
   },
   {
     name: "Pokedex",
@@ -102,7 +100,7 @@ const projects = [
     link: "https://conectaperiferia.vercel.app/",
     img: "conecta-periferia.webp",
     details:
-      "Projeto de TCC focado na inclusão digital e no fortalecimento de comunidades periféricas, com design responsivo e navegação intuitiva.",
+      "Projeto de TCC focado na inclusão digital e fortalecimento de comunidades periféricas, com design responsivo.",
   },
   {
     name: "DigBank",
@@ -110,7 +108,7 @@ const projects = [
     link: "https://github.com/RafaDev01/DigBank",
     img: "bank.webp",
     details:
-      "Simulação de um sistema bancário via terminal, explorando conceitos de POO e boas práticas em C#.",
+      "Simulação de sistema bancário via terminal, explorando conceitos de POO e boas práticas em C#.",
   },
   {
     name: "Tela de Login",
@@ -118,7 +116,7 @@ const projects = [
     link: "https://pagina-de-log-in-lol.vercel.app/#",
     img: "lol.webp",
     details:
-      "Interface de login estilizada, inspirada no universo de League of Legends, com foco em design visual e experiência do usuário.",
+      "Interface de login estilizada, inspirada no universo de League of Legends, com foco em design visual.",
   },
   {
     name: "Gerador de Senhas",
@@ -126,15 +124,15 @@ const projects = [
     link: "https://gerador-de-senha-one.vercel.app/",
     img: "gerador-senha.webp",
     details:
-      "Ferramenta para gerar senhas aleatórias, permitindo configuração personalizada.",
+      "Ferramenta para gerar senhas aleatórias com configuração personalizada.",
   },
   {
-    name: "Jogo da velha",
+    name: "Jogo da Velha",
     technologies: ["HTML", "CSS", "JavaScript"],
     link: "https://jogo-da-velha-silk-tau.vercel.app/",
     img: "tic-tac-toe.webp",
     details:
-      "Jogo da velha para duas pessoas, desenvolvido com HTML, CSS e JavaScript, com interface amigável.",
+      "Jogo da velha para duas pessoas com interface amigável.",
   },
   {
     name: "Mario Jump",
@@ -142,7 +140,7 @@ const projects = [
     link: "https://mario-game-cyan.vercel.app/",
     img: "mario-jump.webp",
     details:
-      "Jogo interativo inspirado no universo Mario, desenvolvido para explorar animações e interações básicas com JavaScript.",
+      "Jogo interativo inspirado no universo Mario, desenvolvido para explorar animações com JavaScript.",
   },
   {
     name: "Clone Google",
@@ -150,7 +148,7 @@ const projects = [
     link: "https://clone-google2.vercel.app",
     img: "google.webp",
     details:
-      "Clone fiel da página inicial de busca do Google, criado para praticar habilidades de design responsivo e semântica em HTML e CSS.",
+      "Clone da página inicial de busca do Google, criado para praticar design responsivo e semântica HTML.",
   },
   {
     name: "Pokemon Game",
@@ -158,48 +156,65 @@ const projects = [
     link: "https://github.com/RafaDev01/jogoJavaFacul",
     img: "pokemon.webp",
     details:
-      "Jogo de console simples, desenvolvido como primeiro projeto utilizando conceitos de Programação Orientada a Objetos em Java.",
+      "Jogo de console simples desenvolvido como primeiro projeto em Java, explorando conceitos de POO.",
   },
 ];
 
+const techLabels = {
+  ts: "TypeScript",
+  tailwind: "Tailwind",
+  Tailwind: "Tailwind",
+  "React-Native": "React Native",
+  CSharp: "C#",
+  css: "CSS",
+  Nextjs: "Next.js",
+};
+
+function getTechLabel(tech) {
+  return techLabels[tech] || tech;
+}
+
 function renderProjectCards() {
   const cardContainer = document.getElementById("projectCardContainer");
-  cardContainer.innerHTML = ""; // Limpa o conteúdo existente
+  cardContainer.innerHTML = "";
 
   projects.forEach((project) => {
-    // Gera o HTML dos ícones das tecnologias
     const iconsHTML = project.technologies
       .map((tech) => {
-        const fileExtension =
-          tech === "React-Native" || tech === "ts" ? "webp" : "svg";
-        return `<img src="./assets/img/${tech.toLowerCase()}.${fileExtension}" alt="${tech}" title="${tech}" />`;
+        const ext = tech === "React-Native" || tech === "ts" ? "webp" : "svg";
+        return `<img src="./assets/img/${tech.toLowerCase()}.${ext}" alt="${getTechLabel(tech)}" title="${getTechLabel(tech)}" />`;
       })
       .join("");
 
-    // Gera o HTML do card do projeto
+    const tagsHTML = project.technologies
+      .slice(0, 4)
+      .map((tech) => `<span class="project-tag">${getTechLabel(tech)}</span>`)
+      .join("");
+
     const cardHTML = `
-            <div>
-                <h3 class="title-project">${project.name}</h3>
-                <div class="project-card" id="card-${project.name}">
-                    <div class="image-container">
-                        <img class="img-project" src="./assets/img/projects/${project.img}" alt="${project.name}" loading="lazy" />
-                        <div>
-                            <div class="overlay-tech hidden" id="tech-${project.name}">
-                                ${iconsHTML}
-                            </div>
-                            <div class="project-details hidden" id="details-${project.name}">
-                                <p>${project.details}</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="actions">
-                    <button onclick="toggleTechnologies('${project.name}')">Tecnologias</button>
-                    <button onclick="toggleDetails('${project.name}')">Detalhes</button>
-                    <button onclick="goToLink('${project.link}')">Deploy</button>
-                </div>
+      <div class="project-wrapper">
+        <div class="project-card" id="card-${project.name}">
+          <div class="image-container">
+            <img class="img-project" src="./assets/img/projects/${project.img}" alt="${project.name}" loading="lazy" />
+            <div class="overlay-tech hidden" id="tech-${project.name}">
+              ${iconsHTML}
             </div>
-        `;
+            <div class="project-details hidden" id="details-${project.name}">
+              <p>${project.details}</p>
+            </div>
+          </div>
+        </div>
+        <div class="project-footer">
+          <h3 class="title-project">${project.name}</h3>
+          <div class="project-tags">${tagsHTML}</div>
+          <div class="actions">
+            <button onclick="toggleTechnologies('${project.name}')">Tech</button>
+            <button onclick="toggleDetails('${project.name}')">Info</button>
+            <button onclick="goToLink('${project.link}')">Abrir ↗</button>
+          </div>
+        </div>
+      </div>
+    `;
 
     cardContainer.insertAdjacentHTML("beforeend", cardHTML);
   });
@@ -209,7 +224,6 @@ function toggleTechnologies(projectName) {
   const techDiv = document.getElementById(`tech-${projectName}`);
   const detailsDiv = document.getElementById(`details-${projectName}`);
 
-  // Alterna a exibição de tecnologias e garante que detalhes sejam ocultados
   if (!techDiv.classList.contains("visible")) {
     detailsDiv.classList.remove("visible");
     detailsDiv.classList.add("hidden");
@@ -222,7 +236,6 @@ function toggleDetails(projectName) {
   const techDiv = document.getElementById(`tech-${projectName}`);
   const detailsDiv = document.getElementById(`details-${projectName}`);
 
-  // Alterna a exibição de detalhes e garante que tecnologias sejam ocultadas
   if (!detailsDiv.classList.contains("visible")) {
     techDiv.classList.remove("visible");
     techDiv.classList.add("hidden");
@@ -235,5 +248,4 @@ function goToLink(link) {
   window.open(link, "_blank");
 }
 
-// Renderiza os cards ao carregar a página
 renderProjectCards();
