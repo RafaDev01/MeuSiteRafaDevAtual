@@ -248,4 +248,29 @@ function goToLink(link) {
   window.open(link, "_blank");
 }
 
+function setupProjectsToggle() {
+  const toggleBtn = document.getElementById("projectsToggleBtn");
+  const container = document.getElementById("projectCardContainer");
+  const collapsedLimit = 6;
+
+  if (!toggleBtn || !container) return;
+
+  if (projects.length <= collapsedLimit) {
+    toggleBtn.remove();
+    return;
+  }
+
+  toggleBtn.addEventListener("click", () => {
+    const expanded = container.classList.toggle("show-all");
+    toggleBtn.textContent = expanded ? "Ver menos" : "Ver mais projetos";
+    toggleBtn.setAttribute("aria-expanded", String(expanded));
+    if (!expanded) {
+      document
+        .getElementById("portfolio")
+        .scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  });
+}
+
 renderProjectCards();
+setupProjectsToggle();

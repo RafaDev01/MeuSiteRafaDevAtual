@@ -15,6 +15,41 @@
   }
 }
 
+/* Collapsed project list on mobile/tablet */
+.projects-toggle {
+  display: none;
+}
+
+@media (max-width: 860px) {
+  #projectCardContainer:not(.show-all) .project-wrapper:nth-child(n + 7) {
+    display: none;
+  }
+
+  .projects-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 8px auto 0;
+    padding: 12px 28px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.04);
+    color: rgba(255, 255, 255, 0.85);
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+  }
+
+  .projects-toggle:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
 /* Card wrapper */
 .project-wrapper {
   width: 340px;
