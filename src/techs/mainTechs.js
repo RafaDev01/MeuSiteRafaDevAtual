@@ -12,6 +12,7 @@ const primaryLanguages = [
   { name: "MySQL", img: "assets/img/mysql.svg" },
   { name: "Postman", img: "assets/img/postman.svg" },
   { name: "Git", img: "assets/img/git.svg" },
+  { name: "Claude", img: "assets/img/claude.svg" },
   { name: "Linux Ubuntu", img: "assets/img/ubuntu.svg" },
   { name: "Unified modeling language", img: "assets/img/uml.svg" },
 ];
@@ -73,7 +74,7 @@ function flipCardsSequentially() {
 
   const unflipTimeoutId = setTimeout(
     unflipCardsSequentially,
-    cards.length * 500 + 2000
+    cards.length * 500 + 2000,
   );
   timeoutIds.push(unflipTimeoutId);
 }
@@ -88,10 +89,13 @@ function unflipCardsSequentially() {
       timeoutIds.push(timeoutId);
     });
 
-  const repeatTimeoutId = setTimeout(() => {
-    isFlipping = false;
-    flipCardsSequentially();
-  }, cards.length * 500 + 2000);
+  const repeatTimeoutId = setTimeout(
+    () => {
+      isFlipping = false;
+      flipCardsSequentially();
+    },
+    cards.length * 500 + 2000,
+  );
   timeoutIds.push(repeatTimeoutId);
 }
 
