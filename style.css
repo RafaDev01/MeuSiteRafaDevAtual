@@ -3,7 +3,9 @@
 /* ==============================
    RESET & BASE
 ============================== */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -50,7 +52,9 @@ body {
   top: 0;
   width: 100%;
   z-index: 1000;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .wrap-header {
@@ -62,7 +66,7 @@ body {
 
 .logo {
   border-radius: 50%;
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  border: 2px solid #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -135,11 +139,21 @@ body {
 }
 
 @keyframes rotateLogo {
-  0%   { border-color: rgba(255,255,255,0.2) var(--color-accent) rgba(255,255,255,0.2) rgba(255,255,255,0.2); }
-  25%  { border-color: rgba(255,255,255,0.2) rgba(255,255,255,0.2) var(--color-accent) rgba(255,255,255,0.2); }
-  50%  { border-color: rgba(255,255,255,0.2) rgba(255,255,255,0.2) rgba(255,255,255,0.2) var(--color-accent); }
-  75%  { border-color: var(--color-accent) rgba(255,255,255,0.2) rgba(255,255,255,0.2) rgba(255,255,255,0.2); }
-  100% { border-color: rgba(255,255,255,0.2) var(--color-accent) rgba(255,255,255,0.2) rgba(255,255,255,0.2); }
+  0% {
+    border-color: #ffffff var(--color-accent) #ffffff #ffffff;
+  }
+  25% {
+    border-color: #ffffff #ffffff var(--color-accent) #ffffff;
+  }
+  50% {
+    border-color: #ffffff #ffffff #ffffff var(--color-accent);
+  }
+  75% {
+    border-color: var(--color-accent) #ffffff #ffffff #ffffff;
+  }
+  100% {
+    border-color: #ffffff var(--color-accent) #ffffff #ffffff;
+  }
 }
 
 /* ==============================
@@ -160,7 +174,9 @@ body {
     top: 59px;
     right: 0;
     height: 0;
-    transition: height 0.5s ease, visibility 0.5s ease;
+    transition:
+      height 0.5s ease,
+      visibility 0.5s ease;
     visibility: hidden;
     overflow: hidden;
     z-index: 1000;
@@ -298,6 +314,26 @@ body {
   letter-spacing: 0.02em;
 }
 
+.availability-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  padding: 6px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.availability-badge .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.15);
+}
+
 .hero-description {
   font-size: 1rem;
   line-height: 1.7;
@@ -326,7 +362,9 @@ body {
   font-size: 0.9rem;
   text-decoration: none;
   letter-spacing: 0.02em;
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .btn-primary:hover {
@@ -353,7 +391,10 @@ body {
   text-decoration: none;
   letter-spacing: 0.02em;
   border: 1.5px solid var(--color-border);
-  transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .btn-outline:hover {
@@ -385,7 +426,9 @@ body {
   background: none;
   border: 1.5px solid transparent;
   cursor: pointer;
-  transition: border-color 0.2s ease, background-color 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
 }
 
 .social a:hover {
@@ -495,7 +538,8 @@ body {
 }
 
 .name-apresentation {
-  animation: blinkCursor 500ms steps(20) infinite normal,
+  animation:
+    blinkCursor 500ms steps(20) infinite normal,
     typing 2s steps(250) 1s normal both;
   display: inline-block;
   font-weight: 700;
@@ -507,13 +551,21 @@ body {
 }
 
 @keyframes typing {
-  from { width: 0; }
-  to { width: 11em; }
+  from {
+    width: 0;
+  }
+  to {
+    width: 11em;
+  }
 }
 
 @keyframes blinkCursor {
-  from { border-right: 2px solid rgba(0, 0, 0, 0.4); }
-  to { border-right: 2px solid transparent; }
+  from {
+    border-right: 2px solid rgba(0, 0, 0, 0.4);
+  }
+  to {
+    border-right: 2px solid transparent;
+  }
 }
 
 .curriculo-link {
@@ -529,7 +581,9 @@ body {
   font-size: 0.9rem;
   text-decoration: none;
   letter-spacing: 0.02em;
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
   margin-top: 8px;
 }
 
@@ -583,6 +637,14 @@ body {
   height: 3px;
   background: var(--color-accent);
   border-radius: 2px;
+}
+
+.section-subtitle {
+  margin-top: 14px;
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  max-width: 460px;
+  margin-inline: auto;
 }
 
 .section-title--dark {
@@ -675,8 +737,12 @@ body {
 }
 
 @keyframes rotate {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @media (max-width: 600px) {
@@ -835,7 +901,9 @@ body {
   height: 36px;
   border-radius: 50%;
   border: 1px solid var(--color-border);
-  transition: border-color 0.2s ease, background-color 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
 }
 
 .footer-social a:hover {
