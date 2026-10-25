@@ -1,7 +1,15 @@
 const projects = [
   {
+    name: "Gestão Inteligente",
+    technologies: ["NextJs", "ts", "React", "tailwind", "claude"],
+    link: "https://gestaointeligentepro.com.br/",
+    img: "gestaointeligente.png",
+    details:
+       "Landing page responsiva para captura de leads, com design moderno, apresentação estratégica de benefícios e chamadas para ação focadas em conversão.",
+  },
+  {
     name: "PDV Legal",
-    technologies: ["ts", "React", "tailwind"],
+    technologies: ["NextJs", "ts", "React", "tailwind"],
     link: "https://sistema.pdvlegal.com.br/",
     img: "pdvlegal.png",
     details:
